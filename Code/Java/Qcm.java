@@ -11,4 +11,15 @@ class Qcm extends Question //implements Question
     this.reponses = reponses;
     this.indiceBonneReponse = indiceBonneReponse;
   }
+
+  @Override
+  public String toString()
+  {
+    String outputReponses = "";
+    for (String reponse : reponses)
+    {
+      outputReponses += reponse + "\n";
+    }
+    return super.toString() + "\nRéponses :\n" + outputReponses;
+  }
 }
