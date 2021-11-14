@@ -14,4 +14,10 @@ class Joueur
     this.score = 0;
     this.etat = "en attente";
   }
+
+  @Override
+  public String toString()
+  {
+    return "Joueur : [nom : " + this.nom + ", numero : " + this.numero + ", score : " + this.score + ", etat : " + this.etat + "]";
+  }
 }
