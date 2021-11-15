@@ -1,6 +1,8 @@
 package pooprojet;
 
-class Phase
+interface Phase
 {
-  
+  abstract public void nouvellePhase();
+
+  abstract public void selectJoueurs();
 }

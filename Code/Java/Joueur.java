@@ -1,4 +1,5 @@
 package pooprojet;
+import java.util.Scanner;
 
 class Joueur
 {
@@ -31,6 +32,16 @@ class Joueur
   public void chgtEtat(String str)
   {
     this.etat = str;
+  }
+
+  public int getScore()
+  {
+    return this.score;
+  }
+
+  public int getId()
+  {
+    return this.numero;
   }
 
   @Override
