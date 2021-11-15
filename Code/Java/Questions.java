@@ -1,27 +1,46 @@
 package pooprojet;
+import java.util.ArrayList;
 
 class Questions
 {
-  private ArrayList<Question> Quest;
+  private ArrayList<Question> questions;
+  private Themes themes;
 
-  public Question() 
+  public Questions()
   {
-      Quest = ArrayList<>();
+      questions = new ArrayList<>();
+      themes = new Themes();
   }
 
-  public void add(Question q) 
+  public void add(Question q)
   {
-      Quest.add(q);
+      questions.add(q);
   }
 
   public void remove(int i)
   {
-      Quest.remove(i);
+      questions.remove(i);
+  }
+
+  public void getByTheme(String theme)
+  {
+    for (Question question : this.questions)
+    {
+      if (question.getTheme() == theme)
+      {
+        System.out.println(question);
+      }
+    }
   }
 
   @Override
-  public String toString() 
+  public String toString()
   {
-      return 
+    String text = "";
+    for (String theme : themes.getList())
+    {
+      text += theme + " ";
+    }
+    return "[" + text + "]";
   }
 }

@@ -64,7 +64,7 @@ class Joueurs
     String joueursInfo = "";
     for (Joueur joueur : listeJoueurs)
     {
-      joueursInfo += joueur + ", ";
+      joueursInfo += joueur + "\n";
     }
     return "[" + joueursInfo + "]";
   }

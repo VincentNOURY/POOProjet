@@ -16,6 +16,11 @@ class Question
   @Override
   public String toString()
   {
-    return "Thème : " + this.theme + "\nQuestion : " + this.question;
+    return "Question : " + this.question;
+  }
+
+  public String getTheme()
+  {
+    return this.theme;
   }
 }

@@ -29,4 +29,14 @@ Le sujet peut etre consulté dans [Sujet/sujet.pdf](https://github.com/VincentNO
 
 ### Classes
 
+   * Jeu
    * Joueur
+   * Joueurs
+   * Main
+   * Phase
+   * Qcm
+   * Question
+   * Questions
+   * ReponseCourte
+   * Themes
+   * VraiFaux
