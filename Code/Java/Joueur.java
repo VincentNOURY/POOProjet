@@ -15,6 +15,24 @@ class Joueur
     this.etat = "en attente";
   }
 
+  public String saisie()
+  {
+    Scanner scanner = new Scanner (System.in);
+    this.nom = scanner.nextLine();
+    scanner.close();
+    return this.nom;
+  }
+
+  public void majScore(int s)
+  {
+    this.score += s;
+  }
+
+  public void chgtEtat(String str)
+  {
+    this.etat = str;
+  }
+
   @Override
   public String toString()
   {
