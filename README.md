@@ -6,13 +6,13 @@ Le sujet peut etre consulté dans [Sujet/sujet.pdf](https://github.com/VincentNO
 
 ### Thèmes
 
-   * Thème 1
-   * Thème 2
-   * Thème 3
-   * Thème 4
-   * Thème 5
-   * Thème 6
-   * Thème 7
+   * Thème 1 : L'alcool
+   * Thème 2 : Sport
+   * Thème 3 : Géographie
+   * Thème 4 : Espace
+   * Thème 5 : Histoire
+   * Thème 6 : Sciences
+   * Thème 7 : Art
    * Thème 8
    * Thème 9
    * Thème 10
@@ -25,8 +25,8 @@ Le sujet peut etre consulté dans [Sujet/sujet.pdf](https://github.com/VincentNO
    * Niveau 1 : Facile
    * Niveau 2 : Moyen
    * Niveau 3 : Difficile
+   * (Niveau 4 : Hardcore)
 
 ### Classes
 
    * Joueur
-   
