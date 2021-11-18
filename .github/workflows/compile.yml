@@ -17,4 +17,6 @@ jobs:
         distribution: 'adopt'
     - uses: actions/checkout@v2
     - name: build
-      run: ls -R
+      run: |
+        cd Code/Java
+        javac * -d ../../Compile
