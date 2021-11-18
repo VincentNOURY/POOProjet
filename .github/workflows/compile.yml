@@ -1,10 +1,10 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Compile test
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:
