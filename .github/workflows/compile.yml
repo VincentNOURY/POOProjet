@@ -17,4 +17,4 @@ jobs:
         distribution: 'adopt'
     - uses: actions/checkout@v2
     - name: build
-      run: ./gradlew build --no-daemon
+      run: ls -R
