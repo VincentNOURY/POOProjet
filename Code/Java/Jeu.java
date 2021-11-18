@@ -12,7 +12,7 @@ public abstract class Jeu implements Phase
 
   public void nouvellePhase()
   {
-  
+  thisshould not compile
   }
 
   public void selectJoueurs()
