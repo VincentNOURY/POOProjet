@@ -4,7 +4,24 @@ name: Compile test
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-on: [pull_request]
+on:
+  pull_request:
+    types:
+      - labeled
+      - unlabeled
+      - synchronize
+      - opened
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
+  pull_request_review:
+    types:
+      - submitted
+  check_suite:
+    types:
+      - completed
+  status: {}
 
 jobs:
   build:
