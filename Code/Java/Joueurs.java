@@ -66,6 +66,6 @@ class Joueurs
     {
       joueursInfo += joueur + "\n";
     }
-    return "[" + joueursInfo + "]";
+    return "Joueurs : [\n" + joueursInfo + "]";
   }
 }
