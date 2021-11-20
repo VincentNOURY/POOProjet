@@ -21,7 +21,7 @@ class Joueur
     Scanner scanner = new Scanner (System.in);
     this.nom = scanner.nextLine();
     scanner.close();
-    return this.nom;
+    return this.toString();
   }
 
   public void majScore(int s)
