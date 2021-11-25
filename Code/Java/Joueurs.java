@@ -1,5 +1,6 @@
 package pooprojet;
 import java.util.ArrayList;
+import java.lang.Math;
 
 class Joueurs
 {
@@ -67,5 +68,9 @@ class Joueurs
       joueursInfo += joueur + "\n";
     }
     return "Joueurs : [\n" + joueursInfo + "]";
+  }
+
+  public Joueur selectRandomPlayer(){
+    return this.listeJoueurs.get((int)(Math.random() * (this.listeJoueurs.size())));
   }
 }
