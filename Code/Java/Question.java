@@ -1,10 +1,10 @@
 package pooprojet;
 
-class Question
+abstract class Question
 {
-  private String theme;
-  private String question;
-  private int difficulte;
+  protected String theme;
+  protected String question;
+  protected int difficulte;
 
   public Question(String theme, String question, int difficulte)
   {
@@ -14,13 +14,7 @@ class Question
   }
 
   @Override
-  public String toString()
-  {
-    return "Theme : " + this.theme + "\nDifficulté : " + this.difficulte + "\nQuestion : " + this.question;
-  }
+  public abstract String toString();
 
-  public String getTheme()
-  {
-    return this.theme;
-  }
+  public abstract String getTheme();
 }

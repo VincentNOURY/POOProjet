@@ -10,4 +10,14 @@ class ReponseCourte extends Question
     this.reponse = reponse;
   }
 
+  @Override
+  public String toString()
+  {
+    return "Theme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question;
+  }
+
+  public String getTheme()
+  {
+    return this.theme;
+  }
 }
