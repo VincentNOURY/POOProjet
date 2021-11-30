@@ -15,6 +15,7 @@ class Questions
   public void add(Question q)
   {
       questions.add(q);
+      themes.addTheme(q.getTheme());
   }
 
   public void remove(int i)
@@ -39,7 +40,13 @@ class Questions
     String text = "";
     for (String theme : themes.getList())
     {
-      text += theme + " ";
+      text+= "[" + theme + "\n";
+      for (Question question : questions){
+        if (question.getTheme().equals(theme)){
+          text += question;
+        }
+      }
+      text += "]\n";
     }
     return "[" + text + "]";
   }

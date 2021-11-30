@@ -16,7 +16,7 @@ class Question
   @Override
   public String toString()
   {
-    return "Question : " + this.question;
+    return "Theme : " + this.theme + "\nDifficulté : " + this.difficulte + "\nQuestion : " + this.question;
   }
 
   public String getTheme()
