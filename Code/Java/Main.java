@@ -13,5 +13,7 @@ class Main
     Question question1 = new Qcm("Culture générale", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
     System.out.println(question1);
     System.out.println(joueur1);
+    joueurs.createRandomPlayer(4);
+    System.out.println(joueurs);
   }
 }
