@@ -10,10 +10,18 @@ class Main
     joueurs.createJoueur("testName1");
     joueurs.createJoueur("testName2");
     System.out.println(joueurs);
-    Question question1 = new Qcm("Culture générale", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
-    System.out.println(question1);
     System.out.println(joueur1);
     joueurs.createRandomPlayer(4);
     System.out.println(joueurs);
+
+    Questions questions = new Questions();
+    Question question1 = new Qcm("Culture générale", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
+    System.out.println(question1);
+    Question question2 = new Qcm("test", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
+    Question question3 = new Qcm("test2 générale", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
+    questions.add(question1);
+    questions.add(question2);
+    questions.add(question3);
+    System.out.println(questions);
   }
 }
