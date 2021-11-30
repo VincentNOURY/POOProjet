@@ -5,31 +5,40 @@ import java.lang.Math;
 class Joueurs
 {
   private int numeroProchain;
-  private ArrayList<Joueur> listeJoueurs;
+  private Joueur[] listeJoueurs;
+  private int last;
 
   public Joueurs()
   {
     this.numeroProchain = 100;
-    listeJoueurs = new ArrayList<>();
+    this.listeJoueurs = new Joueur[20];
+    this.last = -1;
   }
 
-  public void addJoueur(Joueur joueur)
+  public void addJoueur(Joueur joueur) throws IllegalArgumentException
   {
-    this.listeJoueurs.add(joueur);
+    if (last < 19){
+      this.listeJoueurs[last + 1] = joueur;
+      this.last += 1;
+    }
+    else{
+      throw new IllegalArgumentException("Le nombre de joueurs maximum est atteint");
+    }
   }
 
   public void createJoueur(String name)
   {
     Joueur joueur = new Joueur(name, numeroProchain);
-    listeJoueurs.add(joueur);
+    this.listeJoueurs[last + 1] = joueur;
+    this.last++;
     this.numeroProchain += 10;
   }
 
-  public Joueur get(int indice)
+  public Joueur get(int indice) throws IllegalArgumentException
   {
-    if (indice >= 0 || indice <= listeJoueurs.size())
+    if (indice >= 0 || indice <= listeJoueurs.length)
     {
-      return listeJoueurs.get(indice);
+      return listeJoueurs[indice];
     }
     else
     {
@@ -39,8 +48,8 @@ class Joueurs
 
   public int trouveMinJoueur()
   {
-    int min = this.listeJoueurs.get(0).getScore();
-    int minId = this.listeJoueurs.get(0).getId();
+    int min = this.listeJoueurs[0].getScore();
+    int minId = this.listeJoueurs[0].getId();
 
     for (Joueur joueur : listeJoueurs)
     {
@@ -56,7 +65,9 @@ class Joueurs
 
   public void remove(int indice)
   {
-    this.listeJoueurs.remove(indice);
+    for (int i = indice; i < this.last; i++){
+      this.listeJoueurs[i] = this.listeJoueurs[i + 1];
+    }
   }
 
   @Override
@@ -65,12 +76,26 @@ class Joueurs
     String joueursInfo = "";
     for (Joueur joueur : listeJoueurs)
     {
-      joueursInfo += joueur + "\n";
+      if (joueur != null){
+        joueursInfo += joueur + "\n";
+      }
+
     }
     return "Joueurs : [\n" + joueursInfo + "]";
   }
 
   public Joueur selectRandomPlayer(){
-    return this.listeJoueurs.get((int)(Math.random() * (this.listeJoueurs.size())));
+    return this.listeJoueurs[(int)(Math.random() * (this.listeJoueurs.length))];
   }
+
+  public void createRandomPlayer(int nbOfPlayers) throws IllegalArgumentException
+  {
+    if (nbOfPlayers + last >= 19){
+      throw new IllegalArgumentException("Index out of range");
+    }
+    for (int i = 0; i < nbOfPlayers; i++){
+      this.createJoueur("Joueur Aléatoire " + i);
+    }
+  }
+
 }
