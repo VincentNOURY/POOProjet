@@ -20,6 +20,15 @@ class Themes
     return this.themeList;
   }
 
+  public int getIndex(String theme) throws IllegalArgumentException{
+    for (int i = 0; i < this.themeList.size(); i++){
+      if (themeList.get(i).equals(theme)){
+        return i;
+      }
+    }
+    throw new IllegalArgumentException("Le theme spécifié n'existe pas");
+  }
+
   @Override
   public String toString()
   {
