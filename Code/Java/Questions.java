@@ -41,9 +41,9 @@ class Questions
     for (String theme : themes.getList())
     {
       text+= "[" + theme + "\n";
-      for (Question question : questions){
-        if (question.getTheme().equals(theme)){
-          text += question;
+      for (int i = 0; i < questions.size(); i++){
+        if (questions.get(i).getTheme().equals(theme)){
+          text += "numero : " + i + "\n" + questions.get(i);
         }
       }
       text += "]\n";

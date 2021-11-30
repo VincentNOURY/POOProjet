@@ -17,7 +17,8 @@ class Main
     Questions questions = new Questions();
     Question question1 = new Qcm("Culture générale", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
     System.out.println(question1);
-    Question question2 = new Qcm("test", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
+    String[] str = {"Vrai", "Faux"};
+    Question question2 = new VraiFaux("vraifaux", "Combien y a t'il de secondes dans une minute ?", 1, true, str);
     Question question3 = new Qcm("test2 générale", "Combien y a t'il de secondes dans une minute ?", 1, testReponses, 1);
     questions.add(question1);
     questions.add(question2);
