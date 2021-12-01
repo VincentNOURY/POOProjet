@@ -20,7 +20,7 @@ class Qcm extends Question //implements Question
     {
       outputReponses += reponse + "\n";
     }
-    return "Theme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question + "\nRéponses :\n" + outputReponses;
+    return "Type : QCM\nTheme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question + "\nRéponses :\n" + outputReponses;
   }
 
   public String getTheme()

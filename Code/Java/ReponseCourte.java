@@ -13,7 +13,7 @@ class ReponseCourte extends Question
   @Override
   public String toString()
   {
-    return "Theme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question;
+    return "Type : Réponse Courte\nTheme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question + "\n";
   }
 
   public String getTheme()
