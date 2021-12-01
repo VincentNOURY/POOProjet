@@ -88,14 +88,18 @@ class Joueurs
     return this.listeJoueurs[(int)(Math.random() * (this.listeJoueurs.length))];
   }
 
-  public void createRandomPlayer(int nbOfPlayers) throws IllegalArgumentException
+  public void createRandomPlayers(int nbOfPlayers) throws IllegalArgumentException
   {
-    if (nbOfPlayers + last >= 19){
+    if (nbOfPlayers + this.last > 19){
       throw new IllegalArgumentException("Index out of range");
     }
     for (int i = 0; i < nbOfPlayers; i++){
       this.createJoueur("Joueur Aléatoire " + i);
     }
+  }
+
+  public int size(){
+    return last;
   }
 
 }
