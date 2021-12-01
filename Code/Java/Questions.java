@@ -89,8 +89,8 @@ class Questions
 
   public Question getRandomLevel2ByTheme(String theme){
     LinkedList<Question> themed = new LinkedList<>();
-    for (Question question : this.diff1){
-      if (question.getDifficulte() == 2 && question.getTheme().equals(theme)){
+    for (Question question : this.diff2){
+      if (question.getTheme().equals(theme)){
         themed.add(question);
       }
     }
@@ -99,8 +99,8 @@ class Questions
 
   public Question getRandomLevel3ByTheme(String theme){
     LinkedList<Question> themed = new LinkedList<>();
-    for (Question question : this.diff1){
-      if (question.getDifficulte() == 3 && question.getTheme().equals(theme)){
+    for (Question question : this.diff3){
+      if ( question.getTheme().equals(theme)){
         themed.add(question);
       }
     }
