@@ -46,11 +46,10 @@ public class Jeu implements Phase
   }
 
   public void afficheAllQuestions(){
+    System.out.println();
     for (String theme : this.themes.getList())
     {
-      System.out.println("Theme : " + theme);
-      questions.getByTheme(theme);
-      System.out.println("\n\n");
+      System.out.println("Theme : " + theme + "\n" + questions.getByTheme(theme) + "\n");
     }
   }
 
