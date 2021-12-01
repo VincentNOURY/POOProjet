@@ -32,7 +32,6 @@ class Qcm extends Question //implements Question
     return super.difficulte;
   }
 
-  @Override
   public boolean reponse(int res){
     if (res == this.indiceBonneReponse){
       return true;

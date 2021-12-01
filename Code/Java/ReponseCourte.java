@@ -25,7 +25,6 @@ class ReponseCourte extends Question
     return super.difficulte;
   }
 
-  @Override
   public boolean reponse(String res){
     if (res == this.reponse){
       return true;
