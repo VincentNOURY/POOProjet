@@ -15,7 +15,17 @@ public class Jeu implements Phase
 
   public boolean nbJoueurSuffisant(){
     if (this.phase == 1){
-      
+      return this.joueurs.size() >= 4;
+    }
+    else if (this.phase == 2){
+      return this.joueurs.size() >= 3;
+    }
+    else if (this.phase == 3){
+      return this.joueurs.size() == 2;
+    }
+    else{
+      System.out.println("Ceci n'est pas censé arriver.");
+      return false;
     }
   }
 
