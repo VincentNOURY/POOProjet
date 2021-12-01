@@ -13,11 +13,11 @@ class Questions
 
   public Questions()
   {
-      questions = new ArrayList<>();
-      themes = new Themes();
-      diff1 = new ArrayList<>();
-      diff2 = new ArrayList<>();
-      diff3 = new ArrayList<>();
+      this.questions = new ArrayList<>();
+      this.themes = new Themes();
+      this.diff1 = new ArrayList<>();
+      this.diff2 = new ArrayList<>();
+      this.diff3 = new ArrayList<>();
   }
 
   public void add(Question q)
@@ -33,13 +33,13 @@ class Questions
         this.themes.addTheme(q.getTheme());
       }
       if (q.getDifficulte() == 1){
-        diff1.add(q);
+        this.diff1.add(q);
       }
       else if (q.getDifficulte() == 2){
-        diff2.add(q);
+        this.diff2.add(q);
       }
       else if (q.getDifficulte() == 3){
-        diff3.add(q);
+        this.diff3.add(q);
       }
   }
 
@@ -66,9 +66,9 @@ class Questions
     for (String theme : this.themes.getList())
     {
       text+= "[" + theme + "\n";
-      for (int i = 0; i < questions.size(); i++){
+      for (int i = 0; i < this.questions.size(); i++){
         if (questions.get(i).getTheme().equals(theme)){
-          text += "numero : " + i + "\n" + questions.get(i)+ "\n";
+          text += "numero : " + i + "\n" + this.questions.get(i)+ "\n";
         }
       }
       text += "]\n";
@@ -79,7 +79,7 @@ class Questions
 
   public Question getRandomLevel1ByTheme(String theme){
     LinkedList<Question> themed = new LinkedList<>();
-    for (Question question : diff1){
+    for (Question question : this.diff1){
       if (question.getDifficulte() == 1 && question.getTheme().equals(theme)){
         themed.add(question);
       }
@@ -89,7 +89,7 @@ class Questions
 
   public Question getRandomLevel2ByTheme(String theme){
     LinkedList<Question> themed = new LinkedList<>();
-    for (Question question : diff1){
+    for (Question question : this.diff1){
       if (question.getDifficulte() == 2 && question.getTheme().equals(theme)){
         themed.add(question);
       }
@@ -99,7 +99,7 @@ class Questions
 
   public Question getRandomLevel3ByTheme(String theme){
     LinkedList<Question> themed = new LinkedList<>();
-    for (Question question : diff1){
+    for (Question question : this.diff1){
       if (question.getDifficulte() == 3 && question.getTheme().equals(theme)){
         themed.add(question);
       }
