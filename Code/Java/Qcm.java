@@ -27,4 +27,8 @@ class Qcm extends Question //implements Question
   {
     return super.theme;
   }
+
+  public int getDifficulte(){
+    return super.difficulte;
+  }
 }

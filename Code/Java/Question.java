@@ -17,4 +17,6 @@ abstract class Question
   public abstract String toString();
 
   public abstract String getTheme();
+
+  public abstract int getDifficulte();
 }

@@ -20,4 +20,8 @@ class ReponseCourte extends Question
   {
     return this.theme;
   }
+
+  public int getDifficulte(){
+    return super.difficulte;
+  }
 }
