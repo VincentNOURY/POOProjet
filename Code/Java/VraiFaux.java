@@ -27,4 +27,8 @@ class VraiFaux extends Question
   {
     return super.theme;
   }
+
+  public int getDifficulte(){
+    return super.difficulte;
+  }
 }
