@@ -11,6 +11,7 @@ public class Jeu implements Phase
   private int toSelect;
   private Questions questions;
   private String currentTheme;
+  private Themes themes;
 
   public Jeu()
   {
@@ -18,14 +19,38 @@ public class Jeu implements Phase
     this.joueurs = new Joueurs();
     this.toSelect = 0;
     this.questions = new Questions();
+    this.themes = new Themes();
     this.readFile("../Code/Database/QCM.txt", "qcm");
     this.readFile("../Code/Database/ReponseCourte.txt", "ReponseCourte");
     this.readFile("../Code/Database/VraiFaux.txt", "VraiFaux");
-    this.currentTheme = "";
+    this.currentTheme = themes.getThemeByIndex(0);
+  }
+
+  public void ajouteQuestion(Question q){
+    this.questions.add(q);
+    boolean exists = false;
+    for (String theme : this.themes.getList()){
+      if (theme.equals(q.getTheme())){
+        exists = true;
+      }
+    }
+    if (!exists){
+      this.themes.addTheme(q.getTheme());
+    }
   }
 
   public void afficheAllQuestions(){
     System.out.println(questions);
+  }
+
+  public void prochainTheme(){
+    if (themes.getIndex(this.currentTheme) + 1 == themes.size()){
+      this.currentTheme = themes.getThemeByIndex(0);
+    }
+    else{
+      this.currentTheme = themes.getThemeByIndex(themes.getIndex(this.currentTheme) + 1);
+    }
+
   }
 
   public boolean nbJoueurSuffisant(){
@@ -66,6 +91,10 @@ public class Jeu implements Phase
 
   public void afficheJoueurs(){
     System.out.println(joueurs);
+  }
+
+  public void afficheThemeActuel(){
+    System.out.println("Theme actuel : " + this.currentTheme);
   }
 
   public void selectNext(){
@@ -121,13 +150,13 @@ public class Jeu implements Phase
         while (scanner.hasNextLine()) {
           line = scanner.nextLine().split(",");
           if (type.equals("qcm")){
-            this.questions.add(new Qcm(line[0], line[1], Integer.parseInt(line[2]), line[3].split(";"), Integer.parseInt(line[4])));
+            this.ajouteQuestion(new Qcm(line[0], line[1], Integer.parseInt(line[2]), line[3].split(";"), Integer.parseInt(line[4])));
           }
           if (type.equals("ReponseCourte")){
-            this.questions.add(new ReponseCourte(line[0], line[1], Integer.parseInt(line[2]), line[3]));
+            this.ajouteQuestion(new ReponseCourte(line[0], line[1], Integer.parseInt(line[2]), line[3]));
           }
           if (type.equals("VraiFaux")){
-            this.questions.add(new VraiFaux(line[0], line[1], Integer.parseInt(line[2]), Boolean.parseBoolean(line[3])));
+            this.ajouteQuestion(new VraiFaux(line[0], line[1], Integer.parseInt(line[2]), Boolean.parseBoolean(line[3])));
           }
         }
         scanner.close();
