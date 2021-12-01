@@ -19,4 +19,8 @@ abstract class Question
   public abstract String getTheme();
 
   public abstract int getDifficulte();
+
+  public abstract String getType();
+
+  public abstract boolean reponse(String res);
 }

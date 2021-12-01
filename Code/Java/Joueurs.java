@@ -107,6 +107,15 @@ class Joueurs
     return "Joueurs : [\n" + joueursInfo + "]";
   }
 
+  public Joueur getSelectionne() throws IllegalStateException{
+    for (Joueur joueur : listeJoueurs){
+      if (joueur.getEtat().equals("sélectionné")){
+        return joueur;
+      }
+    }
+    throw new IllegalStateException("Aucun joueur n'est en état sélectionné");
+  }
+
   public Joueur selectRandomPlayer(){
     return this.listeJoueurs[(int)(Math.random() * (this.listeJoueurs.length))];
   }

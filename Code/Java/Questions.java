@@ -14,10 +14,13 @@ class Questions
   public Questions()
   {
       this.questions = new ArrayList<>();
-      this.themes = new Themes();
       this.diff1 = new ArrayList<>();
       this.diff2 = new ArrayList<>();
       this.diff3 = new ArrayList<>();
+  }
+
+  public int size(){
+    return this.questions.size();
   }
 
   public void add(Question q)
@@ -45,18 +48,9 @@ class Questions
       if (question.getTheme().equals(theme))
       {
         System.out.println(question);
+        System.out.println("\n");
       }
     }
-  } // might be useless
-
-  public String getAllQuestionsByTheme(String theme){
-    String text = "";
-    for (int i = 0; i < this.questions.size(); i++){
-      if (questions.get(i).getTheme().equals(theme)){
-        text += "numero : " + i + "\n" + this.questions.get(i)+ "\n";
-      }
-    }
-    return text;
   }
 
   @Override
@@ -64,7 +58,7 @@ class Questions
   {
     String text = "";
     for (int i = 0; i < this.questions.size(); i++){
-      text += "numero : " + i + "\n" + this.questions.get(i)+ "\n";
+        text += "numero : " + i + "\n" + this.questions.get(i)+ "\n";
     }
     return "[" + text + "]";
   }
@@ -93,7 +87,7 @@ class Questions
   public Question getRandomLevel3ByTheme(String theme){
     LinkedList<Question> themed = new LinkedList<>();
     for (Question question : this.diff3){
-      if ( question.getTheme().equals(theme)){
+      if (question.getTheme().equals(theme)){
         themed.add(question);
       }
     }

@@ -18,7 +18,8 @@ class Main
     //}
     for (int i = 0; i < 1; i++){
       jeu.selectNextJoueur();
-      jeu.poserQuestion();
+      jeu.validateQuestion(jeu.poserQuestion());
+      jeu.afficheJoueurs();
     }
   }
 }

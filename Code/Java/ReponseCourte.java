@@ -28,4 +28,8 @@ class ReponseCourte extends Question
   public boolean reponse(String res){
     return res.equals(this.reponse);
   }
+
+  public String getType(){
+    return "ReponseCourte";
+  }
 }

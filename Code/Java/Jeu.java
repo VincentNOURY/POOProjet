@@ -12,10 +12,12 @@ public class Jeu implements Phase
   private Questions questions;
   private String currentTheme;
   private Themes themes;
+  private int incrPhase;
 
   public Jeu()
   {
     this.phase = 1;
+    this.incrPhase = 2;
     this.joueurs = new Joueurs();
     this.toSelect = 0;
     this.questions = new Questions();
@@ -44,7 +46,12 @@ public class Jeu implements Phase
   }
 
   public void afficheAllQuestions(){
-    System.out.println(questions);
+    for (String theme : this.themes.getList())
+    {
+      System.out.println("Theme : " + theme);
+      questions.getByTheme(theme);
+      System.out.println("\n\n");
+    }
   }
 
   public void prochainTheme(){
@@ -75,6 +82,12 @@ public class Jeu implements Phase
 
   public void nouvellePhase(){
     this.phase++;
+    if (this.phase == 2){
+      this.incrPhase = 3;
+    }
+    else if (this.phase == 3){
+      this.incrPhase = 5;
+    }
     this.selectJoueursPourProchainePhase();
     if (!this.nbJoueurSuffisant()){
       System.out.println("Nombre de joueurs insuffisant");
@@ -125,29 +138,34 @@ public class Jeu implements Phase
     this.toSelect++;
   }
 
-  public void poserQuestion(){
+  public Question poserQuestion(){
     if (this.phase == 1){
-      System.out.println(questions.getRandomLevel1ByTheme(this.currentTheme));
+      Question question = questions.getRandomLevel1ByTheme(this.currentTheme);
+      System.out.println(question);
+      return question;
+    }
+    else if (this.phase == 2){
+      Question question = questions.getRandomLevel2ByTheme(this.currentTheme);
+      System.out.println(question);
+      return question;
+    }
+    else{
+      Question question = questions.getRandomLevel3ByTheme(this.currentTheme);
+      System.out.println(question);
+      return question;
+    }
+  }
+
+  public void validateQuestion(Question question){
+    if(question.reponse(this.readReponseString())){
+      joueurs.getSelectionne().majScore(this.incrPhase);
+      System.out.println("Bravo ceci est la bonne réponse votre score est désormais de " + joueurs.getSelectionne().getScore());
     }
   }
 
   public String readReponseString(){
     Scanner scanner = new Scanner(System.in);
     String reponse = scanner.nextLine();
-    scanner.close();
-    return reponse;
-  }
-
-  public int readReponseInt(){
-    Scanner scanner = new Scanner(System.in);
-    int reponse = scanner.nextInt();
-    scanner.close();
-    return reponse;
-  }
-
-  public boolean readReponseBoolean(){
-    Scanner scanner = new Scanner(System.in);
-    boolean reponse = scanner.nextBoolean();
     scanner.close();
     return reponse;
   }

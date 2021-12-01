@@ -40,6 +40,10 @@ class Joueur
     */
   }
 
+  public String getEtat(){
+    return this.etat;
+  }
+
   public int getScore()
   {
     return this.score;
