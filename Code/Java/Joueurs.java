@@ -26,17 +26,40 @@ class Joueurs
     }
   }
 
+  public void keepTwoMax(){
+    int max1 = this.listeJoueurs[0].getScore();
+    Joueur maxJoueur1 = this.listeJoueurs[0];
+    int max2 = this.listeJoueurs[1].getScore();
+    Joueur maxJoueur2 = this.listeJoueurs[1];
+
+    for (Joueur joueur : listeJoueurs)
+    {
+      if (joueur.getScore() > max1)
+      {
+        max1 = joueur.getScore();
+        maxJoueur1 = joueur;
+      }
+      else if (joueur.getScore() > max2)
+      {
+        max2 = joueur.getScore();
+        maxJoueur2 = joueur;
+      }
+    }
+    Joueur[] temp = {maxJoueur1, maxJoueur2};
+    this.listeJoueurs = temp;
+  }
+
   public void createJoueur(String name)
   {
     Joueur joueur = new Joueur(name, numeroProchain);
-    this.listeJoueurs[last + 1] = joueur;
     this.last++;
+    this.listeJoueurs[last] = joueur;
     this.numeroProchain += 10;
   }
 
   public Joueur get(int indice) throws IllegalArgumentException
   {
-    if (indice >= 0 || indice <= listeJoueurs.length)
+    if (indice >= 0 || indice <= last)
     {
       return listeJoueurs[indice];
     }
@@ -59,7 +82,6 @@ class Joueurs
         minId = joueur.getId();
       }
     }
-
     return minId;
   }
 
@@ -68,6 +90,7 @@ class Joueurs
     for (int i = indice; i < this.last; i++){
       this.listeJoueurs[i] = this.listeJoueurs[i + 1];
     }
+    last--;
   }
 
   @Override
@@ -99,7 +122,7 @@ class Joueurs
   }
 
   public int size(){
-    return last;
+    return last + 1;
   }
 
 }

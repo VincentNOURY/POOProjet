@@ -73,11 +73,11 @@ class Questions
   public Question getRandomLevel1ByTheme(String theme){
     LinkedList<Question> themed = new LinkedList<>();
     for (Question question : this.diff1){
-      if (question.getDifficulte() == 1 && question.getTheme().equals(theme)){
+      if (question.getTheme().equals(theme)){
         themed.add(question);
       }
     }
-    return themed.get((int)(Math.random() * (themed.size() + 1)));
+    return themed.get((int)(Math.random() * (themed.size())));
   }
 
   public Question getRandomLevel2ByTheme(String theme){
@@ -87,7 +87,7 @@ class Questions
         themed.add(question);
       }
     }
-    return themed.get((int)(Math.random() * (themed.size() + 1)));
+    return themed.get((int)(Math.random() * (themed.size())));
   }
 
   public Question getRandomLevel3ByTheme(String theme){
@@ -97,6 +97,6 @@ class Questions
         themed.add(question);
       }
     }
-    return themed.get((int)(Math.random() * (themed.size() + 1)));
+    return themed.get((int)(Math.random() * (themed.size())));
   }
 }

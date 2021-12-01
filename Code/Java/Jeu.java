@@ -26,6 +26,10 @@ public class Jeu implements Phase
     this.currentTheme = themes.getThemeByIndex(0);
   }
 
+  public int getNbJoueurs(){
+    return this.joueurs.size();
+  }
+
   public void ajouteQuestion(Question q){
     this.questions.add(q);
     boolean exists = false;
@@ -69,14 +73,21 @@ public class Jeu implements Phase
     }
   }
 
-  public void nouvellePhase()
-  {
+  public void nouvellePhase(){
     this.phase++;
+    this.selectJoueursPourProchainePhase();
+    if (!this.nbJoueurSuffisant()){
+      System.out.println("Nombre de joueurs insuffisant");
+    }
   }
 
-  public void selectJoueurs()
-  {
-    joueurs.remove(joueurs.trouveMinJoueur());
+  public void selectJoueursPourProchainePhase(){
+    if (this.phase == 2){
+      joueurs.remove(joueurs.trouveMinJoueur());
+    }
+    else if (this.phase == 3){
+      joueurs.keepTwoMax();
+    }
   }
 
   public void createRandomPlayers(int n){
@@ -97,8 +108,8 @@ public class Jeu implements Phase
     System.out.println("Theme actuel : " + this.currentTheme);
   }
 
-  public void selectNext(){
-    if (this.toSelect == joueurs.size() - 1)
+  public void selectNextJoueur(){
+    if (this.toSelect == this.joueurs.size())
     {
       this.joueurs.get(toSelect - 1).chgtEtat("en attente");
       this.toSelect = 0;
@@ -114,11 +125,10 @@ public class Jeu implements Phase
     this.toSelect++;
   }
 
-  public boolean poserQuestion(){
+  public void poserQuestion(){
     if (this.phase == 1){
       System.out.println(questions.getRandomLevel1ByTheme(this.currentTheme));
     }
-    return true;
   }
 
   public String readReponseString(){
