@@ -16,10 +16,10 @@ class Main
     //for (int i = 0; i < 10; i ++){
     //  test = jeu.poserQuestion();
     //}
-    //for (int i = 0; i < 1; i++){
-    //  jeu.selectNextJoueur();
-    //  jeu.validateQuestion(jeu.poserQuestion());
-    //  jeu.afficheJoueurs();
-    //}
+    for (int i = 0; i < 1; i++){
+      jeu.selectNextJoueur();
+      jeu.validateQuestion(jeu.poserQuestion());
+      jeu.afficheJoueurs();
+    }
   }
 }
