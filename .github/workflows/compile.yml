@@ -20,7 +20,7 @@ jobs:
     - name: build
       run: |
         cd Code/Java
-        javac * -d ../../Compile
+        javac *.java -d ../../Compile
         
   run-failed:
     name: Close Pull
