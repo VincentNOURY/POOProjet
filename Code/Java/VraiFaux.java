@@ -3,24 +3,19 @@ package pooprojet;
 class VraiFaux extends Question
 {
   private boolean reponse;
-  private String[] reponses;
 
-  public VraiFaux(String theme, String question, int difficulte, boolean reponse, String[] reponses)
+  public VraiFaux(String theme, String question, int difficulte, boolean reponse)
   {
     super(theme, question, difficulte);
     this.reponse = reponse;
-    this.reponses = reponses;
   }
 
   @Override
   public String toString()
   {
     String outputReponses = "";
-    for (String reponse : reponses)
-    {
-      outputReponses += reponse + "\n";
-    }
-    return "Theme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question + "\nRéponses :\n" + outputReponses;
+    outputReponses += "Vrai\nFaux\n";
+    return "Type : Vrai Faux\nTheme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question + "\nRéponses :\n" + outputReponses;
   }
 
   public String getTheme()

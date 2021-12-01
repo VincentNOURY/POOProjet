@@ -23,7 +23,15 @@ class Questions
   public void add(Question q)
   {
       this.questions.add(q);
-      this.themes.addTheme(q.getTheme());
+      boolean exists = false;
+      for (String theme : themes.getList()){
+        if (theme.equals(q.getTheme())){
+          exists = true;
+        }
+      }
+      if (!exists){
+        this.themes.addTheme(q.getTheme());
+      }
       if (q.getDifficulte() == 1){
         diff1.add(q);
       }
@@ -60,7 +68,7 @@ class Questions
       text+= "[" + theme + "\n";
       for (int i = 0; i < questions.size(); i++){
         if (questions.get(i).getTheme().equals(theme)){
-          text += "numero : " + i + "\n" + questions.get(i);
+          text += "numero : " + i + "\n" + questions.get(i)+ "\n";
         }
       }
       text += "]\n";

@@ -1,0 +1,4 @@
+Alcool, On peut mourir à partir de 7L de bière, 1, Vrai
+Alcool, The order of Yoni est une bière vaginale, 2, Vrai
+Alcool, La desperados est une bière, int 1, Vrai
+Alcool, L’alcool réduit le stress, 2, Vrai
