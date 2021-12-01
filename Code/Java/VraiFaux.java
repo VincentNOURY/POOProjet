@@ -26,4 +26,11 @@ class VraiFaux extends Question
   public int getDifficulte(){
     return super.difficulte;
   }
+
+  @Override
+  public boolean reponse(boolean res){
+    if (res == this.reponse){
+      return true;
+    }
+  }
 }
