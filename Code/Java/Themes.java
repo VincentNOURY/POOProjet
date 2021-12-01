@@ -15,6 +15,10 @@ class Themes
     themeList.add(theme);
   }
 
+  public int size(){
+    return this.themeList.size();
+  }
+
   public ArrayList<String> getList()
   {
     return this.themeList;
@@ -27,6 +31,15 @@ class Themes
       }
     }
     throw new IllegalArgumentException("Le theme spécifié n'existe pas");
+  }
+
+  public String getThemeByIndex(int index) throws IllegalArgumentException{
+    if (index < themeList.size() && index >= 0){
+      return themeList.get(index);
+    }
+    else{
+      throw new IllegalArgumentException("Le theme spécifié n'existe pas");
+    }
   }
 
   public String[] getRandomThemes(int n){

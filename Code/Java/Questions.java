@@ -22,16 +22,6 @@ class Questions
 
   public void add(Question q)
   {
-      this.questions.add(q);
-      boolean exists = false;
-      for (String theme : themes.getList()){
-        if (theme.equals(q.getTheme())){
-          exists = true;
-        }
-      }
-      if (!exists){
-        this.themes.addTheme(q.getTheme());
-      }
       if (q.getDifficulte() == 1){
         this.diff1.add(q);
       }
@@ -52,26 +42,29 @@ class Questions
   {
     for (Question question : this.questions)
     {
-      if (question.getTheme() == theme)
+      if (question.getTheme().equals(theme))
       {
         System.out.println(question);
       }
     }
+  } // might be useless
+
+  public String getAllQuestionsByTheme(String theme){
+    String text = "";
+    for (int i = 0; i < this.questions.size(); i++){
+      if (questions.get(i).getTheme().equals(theme)){
+        text += "numero : " + i + "\n" + this.questions.get(i)+ "\n";
+      }
+    }
+    return text;
   }
 
   @Override
   public String toString()
   {
     String text = "";
-    for (String theme : this.themes.getList())
-    {
-      text+= "[" + theme + "\n";
-      for (int i = 0; i < this.questions.size(); i++){
-        if (questions.get(i).getTheme().equals(theme)){
-          text += "numero : " + i + "\n" + this.questions.get(i)+ "\n";
-        }
-      }
-      text += "]\n";
+    for (int i = 0; i < this.questions.size(); i++){
+      text += "numero : " + i + "\n" + this.questions.get(i)+ "\n";
     }
     return "[" + text + "]";
   }

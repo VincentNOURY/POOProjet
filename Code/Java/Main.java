@@ -15,11 +15,13 @@ class Main
     //  jeu.selectNext();
     //}
     //jeu.afficheJoueurs();
-    jeu.afficheAllQuestions();
+    //jeu.afficheAllQuestions();
     //boolean test;
     //for (int i = 0; i < 10; i ++){
     //  test = jeu.poserQuestion();
     //}
-
+    jeu.afficheThemeActuel();
+    jeu.prochainTheme();
+    jeu.afficheThemeActuel();
   }
 }
