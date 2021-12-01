@@ -29,10 +29,10 @@ class Themes
     throw new IllegalArgumentException("Le theme spécifié n'existe pas");
   }
 
-  public String[] getRandomThemes(){
+  public String[] getRandomThemes(int n){
     ArrayList<String> themes = new ArrayList<>();
     ArrayList<Integer> alreadySelected = new ArrayList<>();
-    for (int i = 0; i < 5; i++){
+    for (int i = 0; i < n; i++){
       int index = (int)(Math.random() * (themeList.size() + 1));
       if (!alreadySelected.contains(index)){
         alreadySelected.add(index);

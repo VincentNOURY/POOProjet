@@ -32,6 +32,12 @@ class Joueur
   public void chgtEtat(String str)
   {
     this.etat = str;
+    /*sélectionné
+      gagnant
+      super gagnant
+      éliminé
+      en attente
+    */
   }
 
   public int getScore()
@@ -42,6 +48,10 @@ class Joueur
   public int getId()
   {
     return this.numero;
+  }
+
+  public String getNom(){
+    return this.nom;
   }
 
   @Override
