@@ -1,5 +1,6 @@
 package pooprojet;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.lang.Math;
 
 class Questions
@@ -68,15 +69,33 @@ class Questions
   }
 
 
-  public Question getRandomLevel1(){
-    return diff1.get((int)(Math.random() * (diff1.size() + 1)));
+  public Question getRandomLevel1ByTheme(String theme){
+    LinkedList<Question> themed = new LinkedList<>();
+    for (Question question : diff1){
+      if (question.getDifficulte() == 1 && question.getTheme().equals(theme)){
+        themed.add(question);
+      }
+    }
+    return themed.get((int)(Math.random() * (themed.size() + 1)));
   }
 
-  public Question getRandomLevel2(){
-    return diff2.get((int)(Math.random() * (diff2.size() + 1)));
+  public Question getRandomLevel2ByTheme(String theme){
+    LinkedList<Question> themed = new LinkedList<>();
+    for (Question question : diff1){
+      if (question.getDifficulte() == 2 && question.getTheme().equals(theme)){
+        themed.add(question);
+      }
+    }
+    return themed.get((int)(Math.random() * (themed.size() + 1)));
   }
 
-  public Question getRandomLevel3(){
-    return diff3.get((int)(Math.random() * (diff3.size() + 1)));
+  public Question getRandomLevel3ByTheme(String theme){
+    LinkedList<Question> themed = new LinkedList<>();
+    for (Question question : diff1){
+      if (question.getDifficulte() == 3 && question.getTheme().equals(theme)){
+        themed.add(question);
+      }
+    }
+    return themed.get((int)(Math.random() * (themed.size() + 1)));
   }
 }
