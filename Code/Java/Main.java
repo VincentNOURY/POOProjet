@@ -8,18 +8,18 @@ class Main
   {
     Jeu jeu = new Jeu();
     jeu.createRandomPlayers(4);
-    jeu.afficheJoueurs();
     //jeu.afficheJoueurs();
     //jeu.afficheJoueurs();
-    //jeu.afficheAllQuestions();
+    //jeu.afficheJoueurs();
+    jeu.afficheAllQuestions();
     //boolean test;
     //for (int i = 0; i < 10; i ++){
     //  test = jeu.poserQuestion();
     //}
-    for (int i = 0; i < 1; i++){
-      jeu.selectNextJoueur();
-      jeu.validateQuestion(jeu.poserQuestion());
-      jeu.afficheJoueurs();
-    }
+    //for (int i = 0; i < 1; i++){
+    //  jeu.selectNextJoueur();
+    //  jeu.validateQuestion(jeu.poserQuestion());
+    //  jeu.afficheJoueurs();
+    //}
   }
 }
