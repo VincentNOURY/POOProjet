@@ -27,7 +27,11 @@ class VraiFaux extends Question
     return super.difficulte;
   }
 
-  public boolean reponse(boolean res){
-    return res == this.reponse;
+  public boolean reponse(String res){
+    return Boolean.parseBoolean(res) == this.reponse;
+  }
+
+  public String getType(){
+    return "VraiFaux";
   }
 }
