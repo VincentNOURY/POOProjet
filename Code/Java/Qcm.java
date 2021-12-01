@@ -31,4 +31,8 @@ class Qcm extends Question //implements Question
   public int getDifficulte(){
     return super.difficulte;
   }
+
+  public boolean reponse(int res){
+    return res == this.indiceBonneReponse;
+  }
 }

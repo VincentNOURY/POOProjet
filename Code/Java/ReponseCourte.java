@@ -24,4 +24,8 @@ class ReponseCourte extends Question
   public int getDifficulte(){
     return super.difficulte;
   }
+
+  public boolean reponse(String res){
+    return res.equals(this.reponse);
+  }
 }
