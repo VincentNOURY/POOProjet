@@ -28,8 +28,6 @@ class VraiFaux extends Question
   }
 
   public boolean reponse(boolean res){
-    if (res == this.reponse){
-      return true;
-    }
+    return res == this.reponse;
   }
 }

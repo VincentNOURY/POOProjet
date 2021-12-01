@@ -26,8 +26,6 @@ class ReponseCourte extends Question
   }
 
   public boolean reponse(String res){
-    if (res == this.reponse){
-      return true;
-    }
+    return res.equals(this.reponse);
   }
 }

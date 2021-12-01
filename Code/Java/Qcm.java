@@ -33,8 +33,6 @@ class Qcm extends Question //implements Question
   }
 
   public boolean reponse(int res){
-    if (res == this.indiceBonneReponse){
-      return true;
-    }
+    return res == this.indiceBonneReponse;
   }
 }
