@@ -2,9 +2,9 @@ package pooprojet;
 
 class VraiFaux extends Question
 {
-  private boolean reponse;
+  private String reponse;
 
-  public VraiFaux(String theme, String question, int difficulte, boolean reponse)
+  public VraiFaux(String theme, String question, int difficulte, String reponse)
   {
     super(theme, question, difficulte);
     this.reponse = reponse;
@@ -14,7 +14,7 @@ class VraiFaux extends Question
   public String toString()
   {
     String outputReponses = "";
-    outputReponses += "Vrai\nFaux\n";
+    outputReponses += " Vrai\n Faux\n";
     return "Type : Vrai Faux\nTheme : " + super.theme + "\nDifficulté : " + super.difficulte + "\nQuestion : " + super.question + "\nRéponses :\n" + outputReponses;
   }
 
@@ -28,10 +28,14 @@ class VraiFaux extends Question
   }
 
   public boolean reponse(String res){
-    return Boolean.parseBoolean(res) == this.reponse;
+    return res.equals(this.reponse);
   }
 
   public String getType(){
     return "VraiFaux";
+  }
+
+  public String getReponse(){
+    return this.reponse;
   }
 }

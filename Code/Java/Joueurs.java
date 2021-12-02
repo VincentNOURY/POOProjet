@@ -32,21 +32,46 @@ class Joueurs
     int max2 = this.listeJoueurs[1].getScore();
     Joueur maxJoueur2 = this.listeJoueurs[1];
 
-    for (Joueur joueur : listeJoueurs)
+    for (int i = 2; i < this.last + 1; i++)
     {
-      if (joueur.getScore() > max1)
+      if (listeJoueurs[i].getScore() > max1)
       {
-        max1 = joueur.getScore();
-        maxJoueur1 = joueur;
+        max1 = listeJoueurs[i].getScore();
+        maxJoueur1 = listeJoueurs[i];
       }
-      else if (joueur.getScore() > max2)
+      else if (listeJoueurs[i].getScore() > max2)
       {
-        max2 = joueur.getScore();
-        maxJoueur2 = joueur;
+        max2 = listeJoueurs[i].getScore();
+        maxJoueur2 = listeJoueurs[i];
       }
     }
     Joueur[] temp = {maxJoueur1, maxJoueur2};
     this.listeJoueurs = temp;
+    this.last = 1;
+  }
+
+  public Joueur gagnant(){
+    if (listeJoueurs[0].getScore() > listeJoueurs[1].getScore()){
+      return listeJoueurs[0];
+    }
+    else{
+      return listeJoueurs[1];
+    }
+  }
+
+  public boolean YaPlusPetit(){
+    int min = listeJoueurs[0].getScore();
+    boolean egal = false;
+    for (int i = 1; i < this.last; i++){
+      if (listeJoueurs[i].getScore() < min){
+        min = listeJoueurs[i].getScore();
+        egal = false;
+      }
+      else if (listeJoueurs[i].getScore() == min){
+        egal = true;
+      }
+    }
+    return egal;
   }
 
   public void createJoueur(String name)
@@ -59,7 +84,7 @@ class Joueurs
 
   public Joueur get(int indice) throws IllegalArgumentException
   {
-    if (indice >= 0 || indice <= last)
+    if (indice >= 0 && indice <= last)
     {
       return listeJoueurs[indice];
     }
@@ -72,14 +97,14 @@ class Joueurs
   public int trouveMinJoueur()
   {
     int min = this.listeJoueurs[0].getScore();
-    int minId = this.listeJoueurs[0].getId();
+    int minId = 0;
 
-    for (Joueur joueur : listeJoueurs)
+    for (int i = 0; i < this.last; i++)
     {
-      if (joueur.getScore() < min)
+      if (this.listeJoueurs[i].getScore() < min)
       {
-        min = joueur.getScore();
-        minId = joueur.getId();
+        min = this.listeJoueurs[i].getScore();
+        minId = i;
       }
     }
     return minId;
@@ -133,5 +158,4 @@ class Joueurs
   public int size(){
     return last + 1;
   }
-
 }

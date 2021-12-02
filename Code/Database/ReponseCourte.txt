@@ -1,3 +1,29 @@
-Alcool, Quel est le nom du cocktail fait à base de de tequila de triple sec et de jus de citron ?,3, Margarita
-Alcool, Quelle molécule contiennent les alcools ?,2, éthanol
-Alcool, Quelle J’ai consommé 8 pintes de bières à 5 degrés sachant que je pèse 70 kg et que je suis un homme quel est mon taux d’alcoolémie en g/l au centième près ?,3,2.67
+Alcool, Quel est le nom du cocktail fait à base de de tequila de triple sec et de jus de citron ?,3,Margarita
+Alcool, Quelle molécule contiennent les alcools ?,2,éthanol
+Alcool, J’ai consommé 8 pintes de bières à 5 degrés sachant que je pèse 70 kg et que je suis un homme quel est mon taux d’alcoolémie en g/l au centième près ?,3,2.67
+Sport, Quel pays à gagné la coupe du monde de foot en 2010 ?,2,Espagne
+Sport, A qui fait référence “Mano de Dios” ?,3,Diego Maradona
+Sport, Quel est le nom du sélectionneur de football du Nicaragua en 1969 ?,3,Livio Bendaña Espinoza
+Géographie, Sur quel continent se trouve le Kilimandjaro ?,2,Afrique
+Géographie, Dans quel pays se trouve le Cratère de Chicxulub ?,3,Mexique
+Géographie, Dans quel pays se situe le Mont Blanc ?,2,France
+Espace, Quelle est la planète la plus chaude du système solaire ?,2,Venus
+Espace, Quelle est la planète la plus proche du Soleil ?,2,Mercure
+Espace, Quelle est la vitesse orbitale moyenne de l’astéroïde Cérès en km/s au millième près ?,3,17.882
+Histoire, Quel peuple a découvert l’Amérique ?,3,Les Vikings 
+Histoire, Combien de temps à duré la Guerre de Cent Ans ?,3,116 ans
+Histoire, Quel est le nom de code du projet de recherche de la première bombe atomique ?,2,Projet Manhattan
+Histoire, Quel est le livre le plus vendu au monde ?,1,La Bible
+Sciences, La pomme qui tombe de l’arbre fait référence à,1,Newton
+Sciences, Quelle est la dérivée par rapport au temps de la vitesse ?,3,L'accélération
+Sciences, Comment appelle-t-on un mélange dont on peut distinguer les éléments ?,2,Hétérogène
+Arts, Quel film célèbre raconte le naufrage d’un bateau ?,1,Titanic
+Arts, Lettre à Elise est une musique de,2,Beethoven
+Arts, Les jardins suspendus ont été construits à,3,Babylone
+Littérature, De combien de syllabes est composé un alexandrin ?,2,12
+Littérature, Qui est l’auteur de l’Iliade ?,2,Homère
+Musique, La 5ème symphonie de …,1,Beethoven
+Musique, Requiem est une musique de,3,Mozart
+Echec, Quel est le coup le plus répandu ?,2, e4
+Echec, Combien de case sur un échiquier ?,2, 64
+Echec, La défense sacandinave se faisant après e4 se joue avec,3, d5

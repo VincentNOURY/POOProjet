@@ -2,3 +2,43 @@ Alcool, Quel alcool a le plus haut degré ?,1, Bière; Absinthe; Vin,1
 Alcool, Quelle n’est pas un ingrédient principal de la bière ?,2, Malte; Levure; Riz,2
 Alcool, Quel est le temps minimum de fabrication pour les champagne ?,3, 13 mois; 14 mois; 15 mois,2
 Alcool, Dans quel pays boit-on le plus d’alcool ?,3, Moldavie; Russie; Ukraine,0
+Sport, Quel sport ne se joue pas à la main ?,1, rugby; football américain; tennis,2
+Sport, Quel est le record du monde au 100m ?,3, 9.58; 9.54; 9.52,0
+Sport, Qui a gagné le plus de fois à Roland-Garros ?,2, Novak Djokovic; Rafael Nadal; Roger Federer,1
+Sport, Passer la barre est un terme qu’on utilise dans quel sport ?,2, surf; saut en hauteur; lancer de javelot,0
+Sport, Quelle franchise est tenante du titre de la NFL ?,3, Patriots de la Nouvelle-Angleterre; Eagles de Philadelphie; Buccaneers de Tampa Bay,2
+Géographie, Quelle est la capitale de la Malaisie ?,2, Kuala Lumpur; Jakarta; Manille,0
+Géographie, Quel pays n’a pas le même nom que sa capitale ?,2, Saint-Marin; Taiwan; Luxembourg,1
+Géographie, Lequel de ces pays est le plus petit ?,1, Luxembourg; Vatican; Gibraltar,1
+Géographie, Dans quel pays se trouve l’uluru kata ?,3, Mongolie; Australie; Brésil,1
+Géographie, Quelle est la superficie de la Russie ?,3, 17.13 millions km²; 18.13 millions km²; 19.13 millions km²,0
+Espace, Quel est l’étoile la plus proche de la Terre après le Soleil ?,2, Proxima du Centaure; Sirius A; Epsilon Eridani,0
+Espace, Quelle est la distance Terre Lune ?,3, 349100 km; 384400 km; 414300 km,1
+Espace, Quel est le nom du trou noir au centre de la voie lactée ?,3, Hercules A; Cygnus A; Sagittarius A,2
+Espace, Quel est le nom de la galaxie la plus proche ?,2, Galaxie du Cigare; Galaxie d’Andromède; Galaxie du Sombrero,1
+Espace, Combien de satellites naturels possède uranus ?,3, 8; 27; 54,1
+Histoire, Qui à été le premier président des États-Unis ?,1, George Washington; Abraham Lincoln; Benjamin Franklin,0
+Histoire, Quand à eu lieu la chute de Constantinople marquant la fin de l’Empire Byzantin ?,3, -934; 503; 1453,2
+Histoire, Où se trouve le tombeau de Marie-Madeleine ?,3, Jérusalem; Le Vatican; Saint-Maximin,2
+Histoire, Qui a prouvé pour la première fois que la Terre est ronde ?,2, Galilée; Eratosthène; Orelsan,1
+Sciences, Comment nomme-t-on la sensation de poids ?,2, La pesanteur; L'apesanteur; L’impesenteur,0
+Sciences, Le radium et le polonium ont été découvert par,2, Marie Curie; Albert Einstein; Nicolas Copernic,0
+Sciences, Lequel est un référentiel ayant pour point d’origine le centre de la Terre ?,3, Référentiel terrestre; Référentiel géocentrique; Référentiel héliocentrique,1
+Sciences, En thermochimie si l’enthalpie de réaction est strictement positive alors la réaction est,3, athermique; exothermique; endothermique,2
+Arts, Phèdre est une pièce de,3, Molière; Pierre Corneille; Jean Racine,2
+Arts, Le penseur est une sculpture de,2, Donatello; Auguste Rodin; Michel-Ange,1
+Arts, Comment appelle-t-on les comédiens de la Comédie Française ?,3, Les locataires; Les sociétaires; Les pensionnaires,1
+Arts, Quelle est la ville d’origine des Beatles ?,1, Liverpool; Madrid; New-York,0
+Littérature, Qui est l’auteur des Misérables ?,1, Victor Hugo; Emile Zola; Jean de La Fontaine,0
+Littérature, Combien de pièces a écrit molière ?,2, une vingtaine; une trentaine; une quarantaine,1
+Littérature, Combien de mots contient le plus long roman couramment lu ?,3, 400 000 mots; 1 500 000 mots; 10 000 000 mots,1
+Littérature, “Ce qui ne me fait pas mourir me rend plus fort” est une phrase de,2, Friedrich Nietzsche; Charles Baudelaire; Alexandre Pouchkine,0
+Littérature, Qui a écrit l’apologie de Socrate ?,2, Socrate; Aristote; Platon,2
+Musique, Quel rap d' Eminem contient le record de mots en 30 sec ?,2, Rap God; Lose Yourself; Godzilla,2
+Musique, Combien d’albums studio Drake a-t-il fait ?,3, 4; 5; 6,2
+Musique, Lequel n’est pas un membre des Beatles ?,2, Mick Jagger; Georges Harrison; John Lennon,0
+Musique, Waka Waka est un titre de,2, Beyoncé; Ryanna; Shakira,2
+Echec, Qu’est-ce que mettre en échec ?,1, Prendre une pièce; Menacer le roi; Gagner la partie,1
+Echec, Qu’est ce qu’un Zugzwang ?,3, Un coup forcé; Un coup perdant; Un coup contraint,2
+Echec, Qui est le meilleur joueur d’échec ?,2, Magnus Carlsen; Ding Liren; Hikaru Nakamura,0
+Echec, La défense française commence par les coups,3, e4 e6; e4 d6; d4 d6,0
