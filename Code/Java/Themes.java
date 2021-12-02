@@ -15,6 +15,10 @@ class Themes
     themeList.add(theme);
   }
 
+  public void remove(int i){
+    themeList.remove(i);
+  }
+
   public int size(){
     return this.themeList.size();
   }

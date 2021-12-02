@@ -32,6 +32,10 @@ public class Jeu implements Phase
     return this.joueurs.size();
   }
 
+  public boolean continuer(){
+    return joueurs.YaPlusPetit();
+  }
+
   public void ajouteQuestion(Question q){
     this.questions.add(q);
     boolean exists = false;
@@ -83,22 +87,39 @@ public class Jeu implements Phase
     this.phase++;
     if (this.phase == 2){
       this.incrPhase = 3;
+      this.selectJoueursPourProchainePhase();
+      if (!this.nbJoueurSuffisant()){
+        System.out.println("Nombre de joueurs insuffisant");
+      }
     }
     else if (this.phase == 3){
       this.incrPhase = 5;
+      this.selectJoueursPourProchainePhase();
+      if (!this.nbJoueurSuffisant()){
+        System.out.println("Nombre de joueurs insuffisant");
+      }
+      for (int i = 0; i < themes.size(); i++){
+        themes.remove(0);
+      }
+      themes.addTheme("Sport");
+      themes.addTheme("Espace");
+      themes.addTheme("Alcool");
+      this.currentTheme = "Sport";
     }
-    this.selectJoueursPourProchainePhase();
-    if (!this.nbJoueurSuffisant()){
-      System.out.println("Nombre de joueurs insuffisant");
+    else if (this.phase == 4){
+      System.out.println("Le jeu est terminé");
+      System.out.println("Le gagnant est " + joueurs.gagnant());
     }
   }
 
   public void selectJoueursPourProchainePhase(){
     if (this.phase == 2){
+      System.out.println("Le joueur " + joueurs.get(joueurs.trouveMinJoueur()) + " est éliminé applaudissez-le\n\n\n");
       joueurs.remove(joueurs.trouveMinJoueur());
     }
     else if (this.phase == 3){
       joueurs.keepTwoMax();
+      System.out.println("Les derniers joueurs en lice sont : " + joueurs);
     }
   }
 
@@ -121,7 +142,13 @@ public class Jeu implements Phase
   }
 
   public void selectNextJoueur(){
-    if (this.toSelect == this.joueurs.size())
+    if (this.toSelect > this.joueurs.size()){
+      for (int i = 0; i < this.joueurs.size(); i++){
+        this.joueurs.get(i).chgtEtat("en attente");
+      }
+      this.toSelect = 0;
+    }
+    else if (this.toSelect == this.joueurs.size())
     {
       this.joueurs.get(toSelect - 1).chgtEtat("en attente");
       this.toSelect = 0;
@@ -149,24 +176,22 @@ public class Jeu implements Phase
       return question;
     }
     else{
+      System.out.println(this.currentTheme);
       Question question = questions.getRandomLevel3ByTheme(this.currentTheme);
       System.out.println(question);
       return question;
     }
   }
 
-  public void validateQuestion(Question question){
-    if(question.reponse(this.readReponseString())){
+  public void validateQuestion(Question question, String reponse){
+    if(question.reponse(reponse)){
       joueurs.getSelectionne().majScore(this.incrPhase);
       System.out.println("Bravo ceci est la bonne réponse votre score est désormais de " + joueurs.getSelectionne().getScore());
     }
-  }
-
-  public String readReponseString(){
-    Scanner scanner = new Scanner(System.in);
-    String reponse = scanner.nextLine();
-    scanner.close();
-    return reponse;
+    else{
+      System.out.println("Vous n'avez pas trouvé la bonne réponse, la bonne réponse était " + question.getReponse());
+    }
+    System.out.println("\n\n");
   }
 
   public void readFile(String path, String type) {
@@ -183,7 +208,7 @@ public class Jeu implements Phase
             this.ajouteQuestion(new ReponseCourte(line[0], line[1], Integer.parseInt(line[2]), line[3]));
           }
           if (type.equals("VraiFaux")){
-            this.ajouteQuestion(new VraiFaux(line[0], line[1], Integer.parseInt(line[2]), Boolean.parseBoolean(line[3])));
+            this.ajouteQuestion(new VraiFaux(line[0], line[1], Integer.parseInt(line[2]), line[3].split(" ")[1]));
           }
         }
         scanner.close();

@@ -1,0 +1,4 @@
+Alcool, Quel alcool a le plus haut degré ?,1, Bière; Absinthe; Vin,1
+Alcool, Quelle n’est pas un ingrédient principal de la bière ?,2, Malte; Levure; Riz,2
+Alcool, Quel est le temps minimum de fabrication pour les champagne ?,3, 13 mois; 14 mois; 15 mois,2
+Alcool, Dans quel pays boit-on le plus d’alcool ?,3, Moldavie; Russie; Ukraine,0

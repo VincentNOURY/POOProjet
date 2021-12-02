@@ -39,4 +39,8 @@ class Qcm extends Question //implements Question
   public String getType(){
     return "Qcm";
   }
+
+  public String getReponse(){
+    return this.reponses[indiceBonneReponse];
+  }
 }

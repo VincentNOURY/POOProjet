@@ -23,4 +23,6 @@ abstract class Question
   public abstract String getType();
 
   public abstract boolean reponse(String res);
+
+  public abstract String getReponse();
 }

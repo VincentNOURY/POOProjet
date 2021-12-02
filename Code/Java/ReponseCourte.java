@@ -32,4 +32,8 @@ class ReponseCourte extends Question
   public String getType(){
     return "ReponseCourte";
   }
+
+  public String getReponse(){
+    return this.reponse;
+  }
 }
