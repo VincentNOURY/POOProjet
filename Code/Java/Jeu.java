@@ -36,18 +36,19 @@ public class Jeu implements Phase
     Scanner scanner = new Scanner(System.in);
     String plyer;
     String name;
-    do{
-      System.out.println("Souhaitez-vous ajouter manuellement 1 joueur ?(y/n)");
-      plyer = scanner.nextLine();
-      if (plyer.equals("y")){
-        System.out.println("Veuillez entrer votre nom");
-        name = scanner.nextLine();
-        this.joueurs.createJoueur(name);
-      }
-      else if(this.getNbJoueurs() < 4){
-        this.createRandomPlayers(4 - this.getNbJoueurs());
-      }
-    }while(this.getNbJoueurs() < 4);
+    this.createRandomPlayers(6);
+    //do{
+    //  System.out.println("Souhaitez-vous ajouter manuellement 1 joueur ?(y/n)");
+    //  plyer = scanner.nextLine();
+    //  if (plyer.equals("y")){
+    //    System.out.println("Veuillez entrer votre nom");
+    //    name = scanner.nextLine();
+    //    this.joueurs.createJoueur(name);
+    //  }
+    //  else if(this.getNbJoueurs() < 4){
+  //      this.createRandomPlayers(4 - this.getNbJoueurs());
+    //  }
+  //  }while((this.getNbJoueurs() < 4 || this.getNbJoueurs() != 20) && plyer.equals("y"));
     System.out.println("\n\n\n\n\n\n");
     String reponse = "";
     Question question;
@@ -67,7 +68,7 @@ public class Jeu implements Phase
   }
 
   public boolean continuer(){
-    return joueurs.YaPlusPetit();
+    return joueurs.YaPlusPetit(this.toEliminate());
   }
 
   public void ajouteQuestion(Question q){
@@ -148,12 +149,29 @@ public class Jeu implements Phase
 
   public void selectJoueursPourProchainePhase(){
     if (this.phase == 2){
-      System.out.println("Le joueur " + joueurs.get(joueurs.trouveMinJoueur()) + " est éliminé applaudissez-le\n\n\n");
-      joueurs.remove(joueurs.trouveMinJoueur());
+      for (int i = 0; i < this.toEliminate() + 1; i++){
+        System.out.println("Le joueur " + joueurs.get(joueurs.trouveMinJoueur()) + " est éliminé applaudissez-le\n\n\n");
+        joueurs.remove(joueurs.trouveMinJoueur());
+      }
     }
     else if (this.phase == 3){
       joueurs.keepTwoMax();
       System.out.println("Les derniers joueurs en lice sont : " + joueurs);
+    }
+  }
+
+  public int toEliminate(){
+    if (this.getNbJoueurs() >15){
+      return 6;
+    }
+    else if (this.getNbJoueurs() > 10){
+      return 4;
+    }
+    else if (this.getNbJoueurs() > 5){
+      return 2;
+    }
+    else{
+      return 1;
     }
   }
 
