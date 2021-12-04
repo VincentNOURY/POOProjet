@@ -67,7 +67,7 @@ public class Jeu implements Phase
   }
 
   public boolean continuer(){
-    return joueurs.YaPlusPetit(this.toEliminate());
+    return joueurs.yaPlusPetit(this.toEliminate());
   }
 
   public void ajouteQuestion(Question q){
@@ -148,7 +148,7 @@ public class Jeu implements Phase
 
   public void selectJoueursPourProchainePhase(){
     if (this.phase == 2){
-      for (int i = 0; i < this.toEliminate() + 1; i++){
+      for (int i = 0; i < this.toEliminate(); i++){
         System.out.println("Le joueur " + joueurs.get(joueurs.trouveMinJoueur()) + " est éliminé applaudissez-le\n\n\n");
         joueurs.remove(joueurs.trouveMinJoueur());
       }
@@ -160,7 +160,7 @@ public class Jeu implements Phase
   }
 
   public int toEliminate(){
-    if (this.getNbJoueurs() >15){
+    if (this.getNbJoueurs() > 15){
       return 6;
     }
     else if (this.getNbJoueurs() > 10){

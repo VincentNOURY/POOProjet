@@ -59,13 +59,13 @@ class Joueurs
     }
   }
 
-  public boolean YaPlusPetit(int nbToEliminate){
+  public boolean yaPlusPetit(int nbToEliminate){
     int min = listeJoueurs[0].getScore();
-    int check = 0;
-    for (int i = 1; i < this.last; i++){
+    int check = 1;
+    for (int i = 1; i < this.last + 1; i++){
       if (listeJoueurs[i].getScore() < min){
         min = listeJoueurs[i].getScore();
-        check = 0;
+        check = 1;
       }
       else if (listeJoueurs[i].getScore() == min){
         check++;
