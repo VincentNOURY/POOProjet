@@ -22,9 +22,22 @@ public class Jeu implements Phase
     this.toSelect = 0;
     this.questions = new Questions();
     this.themes = new Themes();
-    this.readFile("../Code/Database/QCM.txt", "qcm");
-    this.readFile("../Code/Database/ReponseCourte.txt", "ReponseCourte");
-    this.readFile("../Code/Database/VraiFaux.txt", "VraiFaux");
+    try{
+      System.out.println("[Info] Initialisation des questions par les fichiers.");
+      this.readFile("../Code/Database/QCM.txt", "qcm");
+      this.readFile("../Code/Database/ReponseCourte.txt", "ReponseCourte");
+      this.readFile("../Code/Database/VraiFaux.txt", "VraiFaux");
+      System.out.println("[Info] Questions initialisées avec succès");
+    }
+    catch (FileNotFoundException fnfe){
+      System.out.println("[Error] Fichiers texte non trouvés, ceci peut etre du a l'environement utilisé où l'endroit d'execution du code.");
+      System.out.println("[Info] Bascule sur le constructeur.");
+      System.out.println("[Info] Initialisation du constructeur.");
+      Constructeur constructeur = new Constructeur(this);
+      System.out.println("[Info] Questions Initialisées avec succès, bon jeu.");
+      //questions = constructeur.getQuestions();
+    }
+    System.out.println("\n\n\n\n\n\n\n");
     this.currentTheme = themes.getThemeByIndex(0);
   }
 
@@ -245,7 +258,7 @@ public class Jeu implements Phase
     System.out.println("\n\n");
   }
 
-  public void readFile(String path, String type) {
+  public void readFile(String path, String type) throws FileNotFoundException {
       File data = new File(path);
       try {
         Scanner scanner = new Scanner(data);
@@ -265,7 +278,7 @@ public class Jeu implements Phase
         scanner.close();
       }
       catch (FileNotFoundException e) {
-        System.out.println("File not found Exception");
+        throw new FileNotFoundException("File not found Exception");
       }
   }
 }
