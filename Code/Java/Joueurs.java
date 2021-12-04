@@ -59,19 +59,19 @@ class Joueurs
     }
   }
 
-  public boolean YaPlusPetit(){
+  public boolean YaPlusPetit(int nbToEliminate){
     int min = listeJoueurs[0].getScore();
-    boolean egal = false;
+    int check = 0;
     for (int i = 1; i < this.last; i++){
       if (listeJoueurs[i].getScore() < min){
         min = listeJoueurs[i].getScore();
-        egal = false;
+        check = 0;
       }
       else if (listeJoueurs[i].getScore() == min){
-        egal = true;
+        check++;
       }
     }
-    return egal;
+    return check > nbToEliminate;
   }
 
   public void createJoueur(String name)
