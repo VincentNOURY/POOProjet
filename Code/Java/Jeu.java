@@ -36,19 +36,18 @@ public class Jeu implements Phase
     Scanner scanner = new Scanner(System.in);
     String plyer;
     String name;
-    this.createRandomPlayers(6);
-    //do{
-    //  System.out.println("Souhaitez-vous ajouter manuellement 1 joueur ?(y/n)");
-    //  plyer = scanner.nextLine();
-    //  if (plyer.equals("y")){
-    //    System.out.println("Veuillez entrer votre nom");
-    //    name = scanner.nextLine();
-    //    this.joueurs.createJoueur(name);
-    //  }
-    //  else if(this.getNbJoueurs() < 4){
-  //      this.createRandomPlayers(4 - this.getNbJoueurs());
-    //  }
-  //  }while((this.getNbJoueurs() < 4 || this.getNbJoueurs() != 20) && plyer.equals("y"));
+    do{
+      System.out.println("Souhaitez-vous ajouter manuellement 1 joueur ?(y/n)");
+      plyer = scanner.nextLine();
+      if (plyer.equals("y")){
+        System.out.println("Veuillez entrer votre nom");
+        name = scanner.nextLine();
+        this.joueurs.createJoueur(name);
+      }
+      else if(this.getNbJoueurs() < 4){
+        this.createRandomPlayers(4 - this.getNbJoueurs());
+      }
+    }while((this.getNbJoueurs() < 4 || this.getNbJoueurs() != 20) && plyer.equals("y"));
     System.out.println("\n\n\n\n\n\n");
     String reponse = "";
     Question question;
