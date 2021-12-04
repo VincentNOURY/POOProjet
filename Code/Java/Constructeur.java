@@ -1,0 +1,113 @@
+package pooprojet;
+
+public class Constructeur {
+
+
+    public Constructeur(Jeu questions){
+        questions.ajouteQuestion(new Qcm("Alcool", "Quel alcool a le plus haut degré ?", 1, " Bière; Absinthe; Vin".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Alcool", "Quelle n’est pas un ingrédient principal de la bière ?", 2, " Malte; Levure; Riz".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Alcool", "Quel est le temps minimum de fabrication pour les champagne ?", 3, " 13 mois; 14 mois; 15 mois".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Alcool", "Dans quel pays boit-on le plus d’alcool ?", 3, " Moldavie; Russie; Ukraine".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Sport", "Quel sport ne se joue pas à la main ?", 1, " rugby; football américain; tennis".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Sport", "Quel est le record du monde au 100m ?", 3, " 9.58;9.54;9.52".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Sport", "Qui a gagné le plus de fois à Roland-Garros ?", 2, " Novak Djokovic; Rafael Nadal; Roger Federer".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Sport", "Passer la barre est un terme qu’on utilise dans quel sport ?", 2, " surf; saut en hauteur; lancer de javelot".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Sport", "Quelle franchise est tenante du titre de la NFL ?", 3, " Patriots de la Nouvelle-Angleterre; Eagles de Philadelphie; Buccaneers de Tampa Bay".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Géographie", "Quelle est la capitale de la Malaisie ?", 2, " Kuala Lumpur; Jakarta; Manille".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Géographie", "Quel pays n’a pas le même nom que sa capitale ?", 2, " Saint-Marin; Taiwan; Luxembourg".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Géographie", "Lequel de ces pays est le plus petit ?", 1, " Luxembourg; Vatican; Gibraltar".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Géographie", "Dans quel pays se trouve l’uluru kata ?", 3, " Mongolie; Australie; Brésil".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Géographie", "Quelle est la superficie de la Russie ?", 3, " 17,13 millions km²;18,13 millions km²;19,13 millions km²".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Espace", "Quel est l’étoile la plus proche de la Terre après le Soleil ?", 2, " Proxima du Centaure; Sirius A; Epsilon Eridani".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Espace", "Quelle est la distance Terre Lune ?", 3, " 349100 km; 384400 km; 414300 km".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Espace", "Quel est le nom du trou noir au centre de la voie lactée ?", 3, " Hercules A; Cygnus A; Sagittarius A".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Espace", "Quel est le nom de la galaxie la plus proche ?", 2, " Galaxie du Cigare; Galaxie d’Andromède; Galaxie du Sombrero".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Espace", "Combien de satellites naturels possède uranus ?", 3, " 8;27;54".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Histoire", "Qui à été le premier président des États-Unis ?", 1, " George Washington; Abraham Lincoln; Benjamin Franklin".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Histoire", "Quand à eu lieu la chute de Constantinople marquant la fin de l’Empire Byzantin ?", 3, " -934;503;1453".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Histoire", "Où se trouve le tombeau de Marie-Madeleine ?", 3, " Jérusalem; Le Vatican; Saint-Maximin".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Histoire", "Qui a prouvé pour la première fois que la Terre est ronde ?", 2, " Galilée; Eratosthène; Orelsan".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Sciences", "Comment nomme-t-on la sensation de poids ?", 2, " La pesanteur; L'apesanteur; L’impesenteur".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Sciences", "Le radium et le polonium ont été découvert par",2, " Marie Curie; Albert Einstein; Nicolas Copernic".split(";"),0));
+        questions.ajouteQuestion(new Qcm("Sciences", "Lequel est un référentiel ayant pour point d’origine le centre de la Terre ?", 3, " Référentiel terrestre; Référentiel géocentrique; Référentiel héliocentrique".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Sciences", "En thermochimie si l’enthalpie de réaction est strictement positive alors la réaction est", 3, " athermique; exothermique; endothermique".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Arts", "Phèdre est une pièce de", 3, " Molière; Pierre Corneille; Jean Racine".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Arts", "Le penseur est une sculpture de", 2, " Donatello; Auguste Rodin; Michel-Ange".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Arts", "Comment appelle-t-on les comédiens de la Comédie Française ?", 3, " Les locataires; Les sociétaires; Les pensionnaires".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Arts", "Quelle est la ville d’origine des Beatles ?", 1, " Liverpool; Madrid; New-York".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Littérature", "Qui est l’auteur des Misérables ?", 1, " Victor Hugo; Emile Zola; Jean de La Fontaine".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Littérarure", "Combien de pièces a écrit molière ?", 2, " une vingtaine; une trentaine; une quarantaine".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Littérarure", "Combien de mots contient le plus long roman couramment lu ?", 3, " 400 000 mots; 1 500 000 mots; 10 000 000 mots".split(";"),1));
+        questions.ajouteQuestion(new Qcm("Littérarure", "“Ce qui ne me fait pas mourir me rend plus fort” est une phrase de", 2, " Friedrich Nietzsche; Charles Baudelaire; Alexandre Pouchkine".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Littérarure", "Qui a écrit l’apologie de Socrate ?", 2, " Socrate; Aristote; Platon".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Musique", "Quel rap d' Eminem contient le record de mots en 30 sec ?", 2, " Rap God; Lose Yourself; Godzilla".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Musique", "Combien d’albums studio Drake a-t-il fait ?", 3, " 4; 5; 6".split(";"),2));
+        questions.ajouteQuestion(new Qcm("Musique", "Lequel n’est pas un membre des Beatles ?", 2, " Mick Jagger; Georges Harrison; John Lennon".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Musique", "Waka Waka est un titre de", 2, " Beyoncé;Ryanna; Shakira".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Echec", "Qu’est-ce que mettre en échec ?", 1, " Prendre une pièce; Menacer le roi; Gagner la partie".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Echec", "Qu’est ce qu’un Zugzwang ?", 3, " Un coup forcé;Un coup perdant; Un coup contraint".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Echec", "Qui est le meilleur joueur d’échec ?", 2, " Magnus Carlsen; Ding Liren; Hikaru Nakamura".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Echec", "La défense française commence par les coups", 3, " e4 e6;e4 d6;d4 d6".split(";"), 0));
+        questions.ajouteQuestion(new ReponseCourte("Alcool", "Quel est le nom du cocktail fait à base de de tequila de triple sec et de jus de citron ?", 3, "Margarita"));
+        questions.ajouteQuestion(new ReponseCourte("Alcool", "Quelle molécule contiennent les alcools ?", 2, "éthanol"));
+        questions.ajouteQuestion(new ReponseCourte("Alcool", "Quelle J’ai consommé 8 pintes de bières à 5 degrés sachant que je pèse 70 kg et que je suis un homme quel est mon taux d’alcoolémie en g/l au centième près ?", 3, "2.67"));
+        questions.ajouteQuestion(new ReponseCourte("Sport", "Quel pays à gagné la coupe du monde de foot en 2010 ?", 2, "Espagne"));
+        questions.ajouteQuestion(new ReponseCourte("Sport", "A qui fait référence “Mano de Dios” ?", 3, "Diego Maradona"));
+        questions.ajouteQuestion(new ReponseCourte("Sport", "Quel est le nom du sélectionneur de football du Nicaragua en 1969 ?", 3, "Livio Bendaña Espinoza"));
+        questions.ajouteQuestion(new ReponseCourte("Géographie", "Sur quel continent se trouve le Kilimandjaro ?", 2, "Afrique"));
+        questions.ajouteQuestion(new ReponseCourte("Géographie", "Dans quel pays se trouve le Cratère de Chicxulub ?", 3, "Mexique"));
+        questions.ajouteQuestion(new ReponseCourte("Géographie", "Dans quel pays se situe le Mont Blanc ?", 2, "France"));
+        questions.ajouteQuestion(new ReponseCourte("Espace", "Quelle est la planète la plus chaude du système solaire ?", 2, "Venus"));
+        questions.ajouteQuestion(new ReponseCourte("Espace", "Quelle est la planète la plus proche du Soleil ?", 2, "Mercure"));
+        questions.ajouteQuestion(new ReponseCourte("Espace", "Quelle est la vitesse orbitale moyenne de l’astéroïde Cérès en km/s au millième près ?", 3, "17.882"));
+        questions.ajouteQuestion(new ReponseCourte("Histoire", "Quel peuple a découvert l’Amérique ?", 3, "Les Vikings "));
+        questions.ajouteQuestion(new ReponseCourte("Histoire", "Combien de temps à duré la Guerre de Cent Ans ?", 3, "116 ans"));
+        questions.ajouteQuestion(new ReponseCourte("Histoire", "Quel est le nom de code du projet de recherche de la première bombe atomique ?", 2, "Projet Manhattan"));
+        questions.ajouteQuestion(new ReponseCourte("Histoire", "Quel est le livre le plus vendu au monde ?", 1, "La Bible"));
+        questions.ajouteQuestion(new ReponseCourte("Sciences", "La pomme qui tombe de l’arbre fait référence à", 1, "Newton"));
+        questions.ajouteQuestion(new ReponseCourte("Sciences", "Quelle est la dérivée par rapport au temps de la vitesse ?", 3, "L’accélération"));
+        questions.ajouteQuestion(new ReponseCourte("Sciences", "Comment appelle-t-on un mélange dont on peut distinguer les éléments ?", 2, "Hétérogène"));
+        questions.ajouteQuestion(new ReponseCourte("Arts", "Quel film célèbre raconte le naufrage d’un bateau ?", 1, "Titanic"));
+        questions.ajouteQuestion(new ReponseCourte("Arts", "Lettre à Elise est une musique de", 2, "Beethoven"));
+        questions.ajouteQuestion(new ReponseCourte("Arts", "Les jardins suspendus ont été construits à", 3, "Babylone"));
+        questions.ajouteQuestion(new ReponseCourte("Littérature", "De combien de syllabes est composé un alexandrin ?", 2, "12"));
+        questions.ajouteQuestion(new ReponseCourte("Littérature", "Qui est l’auteur de l’Iliade ?", 2, "Homère"));
+        questions.ajouteQuestion(new ReponseCourte("Musique", "La 5ème symphonie de …", 1, "Beethoven"));
+        questions.ajouteQuestion(new ReponseCourte("Musique", "Requiem est une musique de", 3, "Mozart"));
+        questions.ajouteQuestion(new ReponseCourte("Echec", "Quel est le coup le plus répandu ?", 2, "e4"));
+        questions.ajouteQuestion(new ReponseCourte("Echec", "Combien de case sur un échiquier ?", 2, "64"));
+        questions.ajouteQuestion(new ReponseCourte("Echec", "La défense sacandinave se faisant après e4 se joue avec", 3, "d5"));
+        questions.ajouteQuestion(new VraiFaux("Alcool", "On peut mourir à partir de 7L de bière", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Alcool", "The order of Yoni est une bière vaginale", 2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Alcool", "La desperados est une bière", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Alcool", "L’alcool réduit le stress", 2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Sport", "Les celtics de Boston ont autant de titre que les Lakers de Los Angeles soit 17", 2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Sport", "Le chess-boxing existe", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Sport", "Les échecs sont devenus un sport en France en janvier 2000" ,2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Géographie", "Le Pôle Nord se trouve sur de la terre", 2, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Géographie", "Kyoto est la capitale du Japon", 1, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Espace", "Pluton est une planète", 1, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Espace", "Europe est une lune de Neptune", 2, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Histoire", "Steve Jobs a-t-il fondé les studios Pixar ?", 2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Histoire", "Arnold Schwarzenegger a-t-il été gouverneur de Californie entre le 17 Novembre 2003 et le 3 Janvier 2011 ?", 2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Sciences", "Albert Einstein a énoncé la théorie de la relativité restreinte", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Sciences", "Thomas Alva Edison a inventé le premier moteur électrique", 3, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Sciences", "Le stratosfus est un type nuage", 1, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Arts", "Il y a 9 formes d’arts majeurs", 2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Arts", "Hollywood est le plus grand producteur de cinéma au monde", 2, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Arts", "Léonard de Vinci a peint la Joconde", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Littérature", "La disparition est un livre ne contenant pas la lettre “e”", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Littérature", "Les Contemplations de Victor Hugo est une oeuvre tombée aux concours cpge de 2021", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Musique", "Rockstar de Post Malone est la musique la plus streamé de Spotify", 2, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Musique", "Despacito est la musique la plus vue de Youtube", 1, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Musique", "L’album MVP de Mister V est disque d’or", 1, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Musique", "The shape of you est un titre de Ed Sheeran", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Echec", "La dame est la pièce ayant le plus de valeur", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Echec", "Un pion se change toujours en dame en arrivant au bout du plateau", 1, "Faux"));
+        questions.ajouteQuestion(new VraiFaux("Echec", "La Russie est le meilleur pays aux échecs", 2, "Vrai"));
+    }
+
+    //public String getQuestions(){
+    //    return this.Questions ;
+    //}
+}
