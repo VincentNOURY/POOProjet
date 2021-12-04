@@ -32,6 +32,40 @@ public class Jeu implements Phase
     return this.joueurs.size();
   }
 
+  public void start(){
+    Scanner scanner = new Scanner(System.in);
+    String plyer;
+    String name;
+    do{
+      System.out.println("Souhaitez-vous ajouter manuellement 1 joueur ?(y/n)");
+      plyer = scanner.nextLine();
+      if (plyer.equals("y")){
+        System.out.println("Veuillez entrer votre nom");
+        name = scanner.nextLine();
+        this.joueurs.createJoueur(name);
+      }
+      else if(this.getNbJoueurs() < 4){
+        this.createRandomPlayers(4 - this.getNbJoueurs());
+      }
+    }while(this.getNbJoueurs() < 4);
+    System.out.println("\n\n\n\n\n\n");
+    String reponse = "";
+    Question question;
+    for (int j = 0; j < 3; j++){
+      do{
+        for (int i = 0; i < this.getNbJoueurs(); i++){
+          this.selectNextJoueur();
+          question = this.poserQuestion();
+          reponse = scanner.nextLine();
+          this.validateQuestion(question, reponse);
+          this.prochainTheme();
+        }
+      }while (this.continuer());
+      this.nouvellePhase();
+    }
+    scanner.close();
+  }
+
   public boolean continuer(){
     return joueurs.YaPlusPetit();
   }
