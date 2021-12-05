@@ -10,7 +10,7 @@ Géographie, Dans quel pays se situe le Mont Blanc ?,2,France
 Espace, Quelle est la planète la plus chaude du système solaire ?,2,Venus
 Espace, Quelle est la planète la plus proche du Soleil ?,2,Mercure
 Espace, Quelle est la vitesse orbitale moyenne de l’astéroïde Cérès en km/s au millième près ?,3,17.882
-Histoire, Quel peuple a découvert l’Amérique ?,3,Les Vikings 
+Histoire, Quel peuple a découvert l’Amérique ?,3,Les Vikings
 Histoire, Combien de temps à duré la Guerre de Cent Ans ?,3,116 ans
 Histoire, Quel est le nom de code du projet de recherche de la première bombe atomique ?,2,Projet Manhattan
 Histoire, Quel est le livre le plus vendu au monde ?,1,La Bible
@@ -24,6 +24,7 @@ Littérature, De combien de syllabes est composé un alexandrin ?,2,12
 Littérature, Qui est l’auteur de l’Iliade ?,2,Homère
 Musique, La 5ème symphonie de …,1,Beethoven
 Musique, Requiem est une musique de,3,Mozart
-Echec, Quel est le coup le plus répandu ?,2, e4
-Echec, Combien de case sur un échiquier ?,2, 64
-Echec, La défense sacandinave se faisant après e4 se joue avec,3, d5
+Musique, Qui chante la chanson "C'est chô, ça brûle !!!" ?, 2,Magic System
+Echec, Quel est le coup le plus répandu ?,2,e4
+Echec, Combien de case sur un échiquier ?,2,64
+Echec, La défense sacandinave se faisant après e4 se joue avec,3,d5

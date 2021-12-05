@@ -25,4 +25,5 @@ Musique, L’album MVP de Mister V est disque d’or,1, Faux
 Musique, The shape of you est un titre de Ed Sheeran,1, Vrai
 Echec, La dame est la pièce ayant le plus de valeur,1, Vrai
 Echec, Un pion se change toujours en dame en arrivant au bout du plateau,1, Faux
-Echec, La Russie est le meilleur pays aux échecs,2, Vrai 
+Echec, La Russie est le meilleur pays aux échecs,2, Vrai
+Musique, Traîne pas dans notre basse-cour, on passe du coq à l'âne" est une punchline de Gringe ?, 3, Vrai

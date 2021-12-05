@@ -38,6 +38,7 @@ Musique, Quel rap d' Eminem contient le record de mots en 30 sec ?,2, Rap God; L
 Musique, Combien d’albums studio Drake a-t-il fait ?,3, 4; 5; 6,2
 Musique, Lequel n’est pas un membre des Beatles ?,2, Mick Jagger; Georges Harrison; John Lennon,0
 Musique, Waka Waka est un titre de,2, Beyoncé; Ryanna; Shakira,2
+Musique, Qu'est'ce qu'un choeur ?, 1, Personne qui chante en solo; L'outil indipensable pour le corps humain; Groupe de personnes qui chantent ensemble, 2
 Echec, Qu’est-ce que mettre en échec ?,1, Prendre une pièce; Menacer le roi; Gagner la partie,1
 Echec, Qu’est ce qu’un Zugzwang ?,3, Un coup forcé; Un coup perdant; Un coup contraint,2
 Echec, Qui est le meilleur joueur d’échec ?,2, Magnus Carlsen; Ding Liren; Hikaru Nakamura,0

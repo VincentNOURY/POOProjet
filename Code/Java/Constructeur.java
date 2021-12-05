@@ -43,7 +43,8 @@ public class Constructeur {
         questions.ajouteQuestion(new Qcm("Musique", "Quel rap d' Eminem contient le record de mots en 30 sec ?", 2, " Rap God; Lose Yourself; Godzilla".split(";"), 2));
         questions.ajouteQuestion(new Qcm("Musique", "Combien d’albums studio Drake a-t-il fait ?", 3, " 4; 5; 6".split(";"),2));
         questions.ajouteQuestion(new Qcm("Musique", "Lequel n’est pas un membre des Beatles ?", 2, " Mick Jagger; Georges Harrison; John Lennon".split(";"), 0));
-        questions.ajouteQuestion(new Qcm("Musique", "Waka Waka est un titre de", 2, " Beyoncé;Ryanna; Shakira".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Musique", "Waka Waka est un titre de", 2, " Beyoncé; Ryanna; Shakira".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Musique", "Qu'est'ce qu'un choeur ?", 1, " Personne qui chante en solo; L'outil indipensable pour le corps humain; Groupe de personnes qui chantent ensemble".split(";"), 2));
         questions.ajouteQuestion(new Qcm("Echec", "Qu’est-ce que mettre en échec ?", 1, " Prendre une pièce; Menacer le roi; Gagner la partie".split(";"), 1));
         questions.ajouteQuestion(new Qcm("Echec", "Qu’est ce qu’un Zugzwang ?", 3, " Un coup forcé;Un coup perdant; Un coup contraint".split(";"), 2));
         questions.ajouteQuestion(new Qcm("Echec", "Qui est le meilleur joueur d’échec ?", 2, " Magnus Carlsen; Ding Liren; Hikaru Nakamura".split(";"), 0));
@@ -74,6 +75,7 @@ public class Constructeur {
         questions.ajouteQuestion(new ReponseCourte("Littérature", "Qui est l’auteur de l’Iliade ?", 2, "Homère"));
         questions.ajouteQuestion(new ReponseCourte("Musique", "La 5ème symphonie de …", 1, "Beethoven"));
         questions.ajouteQuestion(new ReponseCourte("Musique", "Requiem est une musique de", 3, "Mozart"));
+        questions.ajouteQuestion(new ReponseCourte("Musique", "Qui chante la chanson \"C'est chô, ça brûle !!!\" ?", 2, "Magic System"));
         questions.ajouteQuestion(new ReponseCourte("Echec", "Quel est le coup le plus répandu ?", 2, "e4"));
         questions.ajouteQuestion(new ReponseCourte("Echec", "Combien de case sur un échiquier ?", 2, "64"));
         questions.ajouteQuestion(new ReponseCourte("Echec", "La défense sacandinave se faisant après e4 se joue avec", 3, "d5"));
@@ -102,6 +104,7 @@ public class Constructeur {
         questions.ajouteQuestion(new VraiFaux("Musique", "Despacito est la musique la plus vue de Youtube", 1, "Faux"));
         questions.ajouteQuestion(new VraiFaux("Musique", "L’album MVP de Mister V est disque d’or", 1, "Faux"));
         questions.ajouteQuestion(new VraiFaux("Musique", "The shape of you est un titre de Ed Sheeran", 1, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Musique", "\"Traîne pas dans notre basse-cour, on passe du coq à l'âne\" est une punchline de Gringe ?", 3, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Echec", "La dame est la pièce ayant le plus de valeur", 1, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Echec", "Un pion se change toujours en dame en arrivant au bout du plateau", 1, "Faux"));
         questions.ajouteQuestion(new VraiFaux("Echec", "La Russie est le meilleur pays aux échecs", 2, "Vrai"));
