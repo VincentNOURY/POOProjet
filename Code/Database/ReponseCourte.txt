@@ -1,6 +1,7 @@
 Alcool, Quel est le nom du cocktail fait à base de de tequila de triple sec et de jus de citron ?,3,Margarita
 Alcool, Quelle molécule contiennent les alcools ?,2,éthanol
 Alcool, J’ai consommé 8 pintes de bières à 5 degrés sachant que je pèse 70 kg et que je suis un homme quel est mon taux d’alcoolémie en g/l au centième près ?,3,2.67
+Alcool, Quel alcool se fait à partir de raisin ?,1,Le vin
 Sport, Quel pays à gagné la coupe du monde de foot en 2010 ?,2,Espagne
 Sport, A qui fait référence “Mano de Dios” ?,3,Diego Maradona
 Sport, Quel est le nom du sélectionneur de football du Nicaragua en 1969 ?,3,Livio Bendaña Espinoza
