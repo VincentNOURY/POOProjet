@@ -17,6 +17,7 @@ Espace, Quelle est la distance Terre Lune ?,3, 349100 km; 384400 km; 414300 km,1
 Espace, Quel est le nom du trou noir au centre de la voie lactée ?,3, Hercules A; Cygnus A; Sagittarius A,2
 Espace, Quel est le nom de la galaxie la plus proche ?,2, Galaxie du Cigare; Galaxie d’Andromède; Galaxie du Sombrero,1
 Espace, Combien de satellites naturels possède uranus ?,3, 8; 27; 54,1
+Espace, La Terre se surnomme la planète,1, Verte; Rouge; Bleue,2
 Histoire, Qui à été le premier président des États-Unis ?,1, George Washington; Abraham Lincoln; Benjamin Franklin,0
 Histoire, Quand à eu lieu la chute de Constantinople marquant la fin de l’Empire Byzantin ?,3, -934; 503; 1453,2
 Histoire, Où se trouve le tombeau de Marie-Madeleine ?,3, Jérusalem; Le Vatican; Saint-Maximin,2
@@ -25,6 +26,7 @@ Sciences, Comment nomme-t-on la sensation de poids ?,2, La pesanteur; L'apesante
 Sciences, Le radium et le polonium ont été découvert par,2, Marie Curie; Albert Einstein; Nicolas Copernic,0
 Sciences, Lequel est un référentiel ayant pour point d’origine le centre de la Terre ?,3, Référentiel terrestre; Référentiel géocentrique; Référentiel héliocentrique,1
 Sciences, En thermochimie si l’enthalpie de réaction est strictement positive alors la réaction est,3, athermique; exothermique; endothermique,2
+Science, Quel couche de l'atmosphère se situe entre 12 et 50 km de la surface ?,1, Troposphère; Stratosphère; Exoshpère,1
 Arts, Phèdre est une pièce de,3, Molière; Pierre Corneille; Jean Racine,2
 Arts, Le penseur est une sculpture de,2, Donatello; Auguste Rodin; Michel-Ange,1
 Arts, Comment appelle-t-on les comédiens de la Comédie Française ?,3, Les locataires; Les sociétaires; Les pensionnaires,1
@@ -38,8 +40,9 @@ Musique, Quel rap d' Eminem contient le record de mots en 30 sec ?,2, Rap God; L
 Musique, Combien d’albums studio Drake a-t-il fait ?,3, 4; 5; 6,2
 Musique, Lequel n’est pas un membre des Beatles ?,2, Mick Jagger; Georges Harrison; John Lennon,0
 Musique, Waka Waka est un titre de,2, Beyoncé; Ryanna; Shakira,2
-Musique, Qu'est'ce qu'un choeur ?, 1, Personne qui chante en solo; L'outil indipensable pour le corps humain; Groupe de personnes qui chantent ensemble, 2
+Musique, Qu'est'ce qu'un choeur ?,1, Personne qui chante en solo; L'outil indipensable pour le corps humain; Groupe de personnes qui chantent ensemble,2
 Echec, Qu’est-ce que mettre en échec ?,1, Prendre une pièce; Menacer le roi; Gagner la partie,1
 Echec, Qu’est ce qu’un Zugzwang ?,3, Un coup forcé; Un coup perdant; Un coup contraint,2
 Echec, Qui est le meilleur joueur d’échec ?,2, Magnus Carlsen; Ding Liren; Hikaru Nakamura,0
 Echec, La défense française commence par les coups,3, e4 e6; e4 d6; d4 d6,0
+Echec, Quelle pièce peut sauter par dessus les autres ?,1, Cavalier; Tour; Fou,0
