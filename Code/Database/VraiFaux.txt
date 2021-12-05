@@ -2,28 +2,39 @@ Alcool, On peut mourir à partir de 7L de bière,1, Vrai
 Alcool, The order of Yoni est une bière vaginale,2, Vrai
 Alcool, La desperados est une bière,1, Vrai
 Alcool, L’alcool réduit le stress,2, Vrai
+Alcool, Au XIXème Siècle l'absinthe produit été toxique à forte dose à cause des molécules de Thuyone présent dans sa composition,3, Vrai
 Sport, Les celtics de Boston ont autant de titre que les Lakers de Los Angeles soit 17,2, Vrai
 Sport, Le chess-boxing existe,1, Vrai
 Sport, Les échecs sont devenus un sport en France en janvier 2000,2, Vrai
+Sport, Eric Tabarly à réussi la traversé de l'Atlantique à bord du trimaran Paul Ricard en 1964,3, Faux
 Géographie, Le Pôle Nord se trouve sur de la terre,2, Faux
 Géographie, Kyoto est la capitale du Japon,1, Faux
+Géographie, La Porte de l'Enfer est un champ de gaz naturel situé au Turkménistan,3, Vrai
 Espace, Pluton est une planète,1, Faux
 Espace, Europe est une lune de Neptune,2, Faux
+Espace, Il y a plus de  500 000 000 objets de plus de 1mm en orbite autour de la Terre,3, Faux
 Histoire, Steve Jobs a-t-il fondé les studios Pixar ?,2, Vrai
 Histoire, Arnold Schwarzenegger a-t-il été gouverneur de Californie entre le 17 Novembre 2003 et le 3 Janvier 2011 ?,2, Vrai
+Histoire, La plus vieille brasserie au monde encore en activité se trouve en Belgique,3, Faux
+Histoire, Napoléon était homosexuel,1, Faux
 Sciences, Albert Einstein a énoncé la théorie de la relativité restreinte,1, Vrai
 Sciences, Thomas Alva Edison a inventé le premier moteur électrique,3, Faux
 Sciences, Le stratosfus est un type nuage,1, Faux
+Sciences, La Chine représente 70% de la production photovoltaïque mondiale,2, Vrai
 Arts, Il y a 9 formes d’arts majeurs,2, Vrai
 Arts, Hollywood est le plus grand producteur de cinéma au monde,2, Faux
 Arts, Léonard de Vinci a peint la Joconde,1, Vrai
+Arts, La Vénus de Milo est une statue d'Alexandros d'Antioche,3, Vrai
 Littérature, La disparition est un livre ne contenant pas la lettre “e”,1, Vrai
 Littérature, Les Contemplations de Victor Hugo est une oeuvre tombée aux concours cpge de 2021,1, Vrai
+Littérature, De la dictature en Amérique est un livre de Alexis de Tocqueville,3, Faux
+Littérature, Le mystère de la chambre jaune est un livre de Gaston Leroux,2, Vrai
 Musique, Rockstar de Post Malone est la musique la plus streamé de Spotify,2, Vrai
 Musique, Despacito est la musique la plus vue de Youtube,1, Faux
 Musique, L’album MVP de Mister V est disque d’or,1, Faux
 Musique, The shape of you est un titre de Ed Sheeran,1, Vrai
+Musique, "Traîne pas dans notre basse-cour on passe du coq à l'âne" est une punchline de Gringe ?,3, Vrai
 Echec, La dame est la pièce ayant le plus de valeur,1, Vrai
 Echec, Un pion se change toujours en dame en arrivant au bout du plateau,1, Faux
 Echec, La Russie est le meilleur pays aux échecs,2, Vrai
-Musique, Traîne pas dans notre basse-cour, on passe du coq à l'âne" est une punchline de Gringe ?, 3, Vrai
+Echec, Prendre en passant est un coup où le pion en capture un autre sans aller sur sa case,3, Vrai

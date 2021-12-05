@@ -4,9 +4,11 @@ Alcool, J’ai consommé 8 pintes de bières à 5 degrés sachant que je pèse 7
 Sport, Quel pays à gagné la coupe du monde de foot en 2010 ?,2,Espagne
 Sport, A qui fait référence “Mano de Dios” ?,3,Diego Maradona
 Sport, Quel est le nom du sélectionneur de football du Nicaragua en 1969 ?,3,Livio Bendaña Espinoza
+Sport, Quel est le sport le plus célèbre ?,1,Le foot
 Géographie, Sur quel continent se trouve le Kilimandjaro ?,2,Afrique
 Géographie, Dans quel pays se trouve le Cratère de Chicxulub ?,3,Mexique
 Géographie, Dans quel pays se situe le Mont Blanc ?,2,France
+Géographie, Quelle est la ville Lumière ?,1,Paris
 Espace, Quelle est la planète la plus chaude du système solaire ?,2,Venus
 Espace, Quelle est la planète la plus proche du Soleil ?,2,Mercure
 Espace, Quelle est la vitesse orbitale moyenne de l’astéroïde Cérès en km/s au millième près ?,3,17.882
@@ -22,9 +24,12 @@ Arts, Lettre à Elise est une musique de,2,Beethoven
 Arts, Les jardins suspendus ont été construits à,3,Babylone
 Littérature, De combien de syllabes est composé un alexandrin ?,2,12
 Littérature, Qui est l’auteur de l’Iliade ?,2,Homère
+Littérature, Le malade imaginaire est une pièce de ...,1,Molière
+Littérature, Qui a écrit Le tour de la prison ?,3,Marguerite Yourcenar
 Musique, La 5ème symphonie de …,1,Beethoven
 Musique, Requiem est une musique de,3,Mozart
-Musique, Qui chante la chanson "C'est chô, ça brûle !!!" ?, 2,Magic System
+Musique, Qui chante la chanson "C'est chô ça brûle !!!" ?,2,Magic System
 Echec, Quel est le coup le plus répandu ?,2,e4
 Echec, Combien de case sur un échiquier ?,2,64
 Echec, La défense sacandinave se faisant après e4 se joue avec,3,d5
+Echec, Le fait de bouger son roi et sa tour s'appelle,1,Le roque
