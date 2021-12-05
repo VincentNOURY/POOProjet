@@ -38,10 +38,10 @@ public class Constructeur {
         questions.ajouteQuestion(new Qcm("Arts", "Comment appelle-t-on les comédiens de la Comédie Française ?", 3, " Les locataires; Les sociétaires; Les pensionnaires".split(";"), 1));
         questions.ajouteQuestion(new Qcm("Arts", "Quelle est la ville d’origine des Beatles ?", 1, " Liverpool; Madrid; New-York".split(";"), 0));
         questions.ajouteQuestion(new Qcm("Littérature", "Qui est l’auteur des Misérables ?", 1, " Victor Hugo; Emile Zola; Jean de La Fontaine".split(";"), 0));
-        questions.ajouteQuestion(new Qcm("Littérarure", "Combien de pièces a écrit molière ?", 2, " une vingtaine; une trentaine; une quarantaine".split(";"), 1));
-        questions.ajouteQuestion(new Qcm("Littérarure", "Combien de mots contient le plus long roman couramment lu ?", 3, " 400 000 mots; 1 500 000 mots; 10 000 000 mots".split(";"),1));
-        questions.ajouteQuestion(new Qcm("Littérarure", "“Ce qui ne me fait pas mourir me rend plus fort” est une phrase de", 2, " Friedrich Nietzsche; Charles Baudelaire; Alexandre Pouchkine".split(";"), 0));
-        questions.ajouteQuestion(new Qcm("Littérarure", "Qui a écrit l’apologie de Socrate ?", 2, " Socrate; Aristote; Platon".split(";"), 2));
+        questions.ajouteQuestion(new Qcm("Littérature", "Combien de pièces a écrit molière ?", 2, " une vingtaine; une trentaine; une quarantaine".split(";"), 1));
+        questions.ajouteQuestion(new Qcm("Littérature", "Combien de mots contient le plus long roman couramment lu ?", 3, " 400 000 mots; 1 500 000 mots; 10 000 000 mots".split(";"),1));
+        questions.ajouteQuestion(new Qcm("Littérature", "“Ce qui ne me fait pas mourir me rend plus fort” est une phrase de", 2, " Friedrich Nietzsche; Charles Baudelaire; Alexandre Pouchkine".split(";"), 0));
+        questions.ajouteQuestion(new Qcm("Littérature", "Qui a écrit l’apologie de Socrate ?", 2, " Socrate; Aristote; Platon".split(";"), 2));
         questions.ajouteQuestion(new Qcm("Musique", "Quel rap d' Eminem contient le record de mots en 30 sec ?", 2, " Rap God; Lose Yourself; Godzilla".split(";"), 2));
         questions.ajouteQuestion(new Qcm("Musique", "Combien d’albums studio Drake a-t-il fait ?", 3, " 4; 5; 6".split(";"),2));
         questions.ajouteQuestion(new Qcm("Musique", "Lequel n’est pas un membre des Beatles ?", 2, " Mick Jagger; Georges Harrison; John Lennon".split(";"), 0));
@@ -56,6 +56,7 @@ public class Constructeur {
         questions.ajouteQuestion(new ReponseCourte("Alcool", "Quel est le nom du cocktail fait à base de de tequila de triple sec et de jus de citron ?", 3, "Margarita"));
         questions.ajouteQuestion(new ReponseCourte("Alcool", "Quelle molécule contiennent les alcools ?", 2, "éthanol"));
         questions.ajouteQuestion(new ReponseCourte("Alcool", "Quelle J’ai consommé 8 pintes de bières à 5 degrés sachant que je pèse 70 kg et que je suis un homme quel est mon taux d’alcoolémie en g/l au centième près ?", 3, "2.67"));
+        questions.ajouteQuestion(new ReponseCourte("Alcool", "Quel alcool se fait à partir de raisin ?",1, "Le vin"));
         questions.ajouteQuestion(new ReponseCourte("Sport", "Quel pays à gagné la coupe du monde de foot en 2010 ?", 2, "Espagne"));
         questions.ajouteQuestion(new ReponseCourte("Sport", "A qui fait référence “Mano de Dios” ?", 3, "Diego Maradona"));
         questions.ajouteQuestion(new ReponseCourte("Sport", "Quel est le nom du sélectionneur de football du Nicaragua en 1969 ?", 3, "Livio Bendaña Espinoza"));
@@ -119,13 +120,13 @@ public class Constructeur {
         questions.ajouteQuestion(new VraiFaux("Arts", "La Vénus de Milo est une statue d'Alexandros d'Antioche",3, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Littérature", "La disparition est un livre ne contenant pas la lettre “e”", 1, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Littérature", "Les Contemplations de Victor Hugo est une oeuvre tombée aux concours cpge de 2021", 1, "Vrai"));
-        questions.ajouteQuestion(new VraiFaux("Musique", "Rockstar de Post Malone est la musique la plus streamé de Spotify", 2, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Littérature", "De la dictature en Amérique est un livre de Alexis de Tocqueville",3, "Faux"));
         questions.ajouteQuestion(new VraiFaux("Littérature", "Le mystère de la chambre jaune est un livre de Gaston Leroux",2, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Musique", "Despacito est la musique la plus vue de Youtube", 1, "Faux"));
         questions.ajouteQuestion(new VraiFaux("Musique", "L’album MVP de Mister V est disque d’or", 1, "Faux"));
         questions.ajouteQuestion(new VraiFaux("Musique", "The shape of you est un titre de Ed Sheeran", 1, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Musique", "\"Traîne pas dans notre basse-cour, on passe du coq à l'âne\" est une punchline de Gringe ?", 3, "Vrai"));
+        questions.ajouteQuestion(new VraiFaux("Musique", "Rockstar de Post Malone est la musique la plus streamé de Spotify", 2, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Echec", "La dame est la pièce ayant le plus de valeur", 1, "Vrai"));
         questions.ajouteQuestion(new VraiFaux("Echec", "Un pion se change toujours en dame en arrivant au bout du plateau", 1, "Faux"));
         questions.ajouteQuestion(new VraiFaux("Echec", "La Russie est le meilleur pays aux échecs", 2, "Vrai"));
