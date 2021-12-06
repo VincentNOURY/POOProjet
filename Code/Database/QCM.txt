@@ -26,7 +26,7 @@ Sciences, Comment nomme-t-on la sensation de poids ?,2, La pesanteur; L'apesante
 Sciences, Le radium et le polonium ont été découvert par,2, Marie Curie; Albert Einstein; Nicolas Copernic,0
 Sciences, Lequel est un référentiel ayant pour point d’origine le centre de la Terre ?,3, Référentiel terrestre; Référentiel géocentrique; Référentiel héliocentrique,1
 Sciences, En thermochimie si l’enthalpie de réaction est strictement positive alors la réaction est,3, athermique; exothermique; endothermique,2
-Science, Quel couche de l'atmosphère se situe entre 12 et 50 km de la surface ?,1, Troposphère; Stratosphère; Exoshpère,1
+Sciences, Quel couche de l'atmosphère se situe entre 12 et 50 km de la surface ?,1, Troposphère; Stratosphère; Exoshpère,1
 Arts, Phèdre est une pièce de,3, Molière; Pierre Corneille; Jean Racine,2
 Arts, Le penseur est une sculpture de,2, Donatello; Auguste Rodin; Michel-Ange,1
 Arts, Comment appelle-t-on les comédiens de la Comédie Française ?,3, Les locataires; Les sociétaires; Les pensionnaires,1

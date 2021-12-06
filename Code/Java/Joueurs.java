@@ -99,7 +99,7 @@ class Joueurs
     int min = this.listeJoueurs[0].getScore();
     int minId = 0;
 
-    for (int i = 0; i < this.last; i++)
+    for (int i = 0; i < this.last + 1; i++)
     {
       if (this.listeJoueurs[i].getScore() < min)
       {
