@@ -4,20 +4,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Jeu implements Phase
+public class Jeu
 {
-  private int phase;
+  private Phase phase;
+  private Phase phase1;
+  private Phase phase2;
+  private Phase phase3;
   private Joueurs joueurs;
   private int toSelect;
   private Questions questions;
   private String currentTheme;
   private Themes themes;
-  private int incrPhase;
 
   public Jeu()
   {
-    this.phase = 1;
-    this.incrPhase = 2;
     this.joueurs = new Joueurs();
     this.toSelect = 0;
     this.questions = new Questions();
@@ -35,10 +35,10 @@ public class Jeu implements Phase
       System.out.println("[Info] Initialisation du constructeur.");
       Constructeur constructeur = new Constructeur(this);
       System.out.println("[Info] Questions Initialisées avec succès, bon jeu.");
-      //questions = constructeur.getQuestions();
     }
     System.out.println("\n\n\n\n\n\n\n");
     this.currentTheme = themes.getThemeByIndex(0);
+    this.phase = new PhaseI();
   }
 
   public int getNbJoueurs(){
@@ -57,10 +57,11 @@ public class Jeu implements Phase
         name = scanner.nextLine();
         this.joueurs.createJoueur(name);
       }
-      else if(this.getNbJoueurs() < 4){
-        this.createRandomPlayers(4 - this.getNbJoueurs());
+      else if(this.getNbJoueurs() < phase.nbJoueursMin()){
+        this.createRandomPlayers(phase.nbJoueursMin() - this.getNbJoueurs());
       }
-    }while((this.getNbJoueurs() < 4 || this.getNbJoueurs() != 20) && plyer.equals("y"));
+    }while((this.getNbJoueurs() < phase.nbJoueursMin() || this.getNbJoueurs() != 20) && plyer.equals("y"));
+    phase.setToEliminate(this.joueurs);
     System.out.println("\n\n\n\n\n\n");
     String reponse = "";
     Question question;
@@ -73,6 +74,7 @@ public class Jeu implements Phase
           this.validateQuestion(question, reponse);
           this.prochainTheme();
         }
+        phase.prochainTour();
       }while (this.continuer());
       this.nouvellePhase();
     }
@@ -80,7 +82,8 @@ public class Jeu implements Phase
   }
 
   public boolean continuer(){
-    return joueurs.yaPlusPetit(this.toEliminate());
+    return joueurs.yaPlusPetit(phase.toEliminate()) || !phase.checkTours();
+    // NE fonctionne pas a Modifier
   }
 
   public void ajouteQuestion(Question q){
@@ -111,28 +114,28 @@ public class Jeu implements Phase
     else{
       this.currentTheme = themes.getThemeByIndex(themes.getIndex(this.currentTheme) + 1);
     }
-
   }
 
   public boolean nbJoueurSuffisant(){
-    if (this.phase == 1){
-      return this.joueurs.size() >= 4;
-    }
-    else if (this.phase == 2){
-      return this.joueurs.size() >= 3;
-    }
-    else if (this.phase == 3){
-      return this.joueurs.size() == 2;
-    }
-    else{
-      System.out.println("Ceci n'est pas censé arriver.");
-      return false;
-    }
+      return this.joueurs.size() >= phase.nbJoueursMin();
   }
 
   public void nouvellePhase(){
-    this.phase++;
-    if (this.phase == 2){
+    this.phase.selectJoueursPourProchainePhase(joueurs);
+    if (this.phase.getPhase() == 1){
+      this.phase = this.phase2 = new PhaseII();
+      this.phase.setToEliminate(this.joueurs);
+    }
+    else if (this.phase.getPhase() == 2){
+      this.phase = new PhaseIII(this.themes);
+      this.phase.setToEliminate(this.joueurs);
+      this.currentTheme = "Sport";
+    }
+    //else{
+    //  System.out.println("Le jeu est terminé");
+    //  System.out.println("Le gagnant est " + joueurs.gagnant());
+    //}
+    /*if (this.phase == 2){
       this.incrPhase = 3;
       this.selectJoueursPourProchainePhase();
       if (!this.nbJoueurSuffisant()){
@@ -156,10 +159,10 @@ public class Jeu implements Phase
     else if (this.phase == 4){
       System.out.println("Le jeu est terminé");
       System.out.println("Le gagnant est " + joueurs.gagnant());
-    }
+    }*/
   }
 
-  public void selectJoueursPourProchainePhase(){
+  /*public void selectJoueursPourProchainePhase(){
     if (this.phase == 2){
       for (int i = 0; i < this.toEliminate(); i++){
         System.out.println("Le joueur " + joueurs.get(joueurs.trouveMinJoueur()) + " est éliminé applaudissez-le\n\n\n");
@@ -170,22 +173,7 @@ public class Jeu implements Phase
       joueurs.keepTwoMax();
       System.out.println("Les derniers joueurs en lice sont : " + joueurs);
     }
-  }
-
-  public int toEliminate(){
-    if (this.getNbJoueurs() > 15){
-      return 6;
-    }
-    else if (this.getNbJoueurs() > 10){
-      return 4;
-    }
-    else if (this.getNbJoueurs() > 5){
-      return 2;
-    }
-    else{
-      return 1;
-    }
-  }
+  }*/
 
   public void createRandomPlayers(int n){
     try{
@@ -229,12 +217,12 @@ public class Jeu implements Phase
   }
 
   public Question poserQuestion(){
-    if (this.phase == 1){
+    if (this.phase.getPhase() == 1){
       Question question = questions.getRandomLevel1ByTheme(this.currentTheme);
       System.out.println(question);
       return question;
     }
-    else if (this.phase == 2){
+    else if (this.phase.getPhase() == 2){
       Question question = questions.getRandomLevel2ByTheme(this.currentTheme);
       System.out.println(question);
       return question;
@@ -249,7 +237,7 @@ public class Jeu implements Phase
 
   public void validateQuestion(Question question, String reponse){
     if(question.reponse(reponse)){
-      joueurs.getSelectionne().majScore(this.incrPhase);
+      phase.incrScore(joueurs.getSelectionne());
       System.out.println("Bravo ceci est la bonne réponse votre score est désormais de " + joueurs.getSelectionne().getScore());
     }
     else{
