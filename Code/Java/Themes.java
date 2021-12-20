@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 import java.util.ArrayList;
 
 class Themes
@@ -66,9 +66,9 @@ class Themes
     String text = "";
     for (int i = 0; i < themeList.size() - 1; i++)
     {
-      text += themeList.get(i) + i + ", ";
+      text += themeList.get(i) + " - index : " + i + ", ";
     }
-    text += themeList.get(themeList.size() - 1);
+    text += themeList.get(themeList.size() - 1) + " - index : " + (themeList.size() - 1);
     return "[" + text + "]";
   }
 }

@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.lang.Math;
@@ -46,6 +46,17 @@ class Questions{
       }
     }
     return text;
+  }
+
+  public ArrayList<Question> getListByTheme(String theme){
+    ArrayList<Question> array = new ArrayList<>();
+    for (Question question : this.questions){
+      if (question.getTheme().equals(theme))
+      {
+        array.add(question);
+      }
+    }
+    return array;
   }
 
   @Override

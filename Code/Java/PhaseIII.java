@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 
 public class PhaseIII implements Phase{
 
@@ -9,7 +9,7 @@ public class PhaseIII implements Phase{
   private int tour;
 
   public PhaseIII(Themes themes){
-    this.incrPhase = 3;
+    this.incrPhase = 5;
     this.nbJoueurs = 2;
     this.nbTours = 2;
     this.tour = 0;

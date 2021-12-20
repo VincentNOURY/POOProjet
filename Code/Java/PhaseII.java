@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 
 public class PhaseII implements Phase{
   private int incrPhase;

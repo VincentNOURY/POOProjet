@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 
 class Qcm extends Question //implements Question
 {

@@ -1,3 +1,0 @@
-Alcool, Quel est le nom du cocktail fait à base de de tequila de triple sec et de jus de citron ?, 3, Margarita
-Alcool, Quelle molécule contiennent les alcools ?, 2, éthanol
-Alcool, Quelle J’ai consommé 8 pintes de bières à 5 degrés sachant que je pèse 70 kg et que je suis un homme quel est mon taux d’alcoolémie en g/l au centième près ?, 4, 2.67

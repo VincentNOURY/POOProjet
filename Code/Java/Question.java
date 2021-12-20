@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 
 abstract class Question
 {
