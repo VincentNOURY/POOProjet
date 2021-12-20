@@ -1,6 +1,7 @@
-package pooprojet;
+package testsapplication;
 import java.io.File;
 import java.util.Scanner;
+import application.Jeu;
 
 class Main
 {

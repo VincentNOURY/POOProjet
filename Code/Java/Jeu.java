@@ -1,8 +1,9 @@
-package pooprojet;
+package application;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Jeu
 {
@@ -45,6 +46,10 @@ public class Jeu
     return this.joueurs.size();
   }
 
+  public void afficheTheme(){
+    System.out.println(this.themes);
+  }
+
   public void start(){
     Scanner scanner = new Scanner(System.in);
     String plyer;
@@ -68,6 +73,10 @@ public class Jeu
     for (int j = 0; j < 3; j++){
       do{
         for (int i = 0; i < this.getNbJoueurs(); i++){
+          if (this.phase.getPhase() == 2){
+            System.out.println("Veuillez choisir un theme parmi les suivants :" + this.themes + "veuillez entrer son nom :");
+            this.currentTheme = scanner.nextLine();
+          }
           this.selectNextJoueur();
           question = this.poserQuestion();
           reponse = scanner.nextLine();
@@ -118,6 +127,14 @@ public class Jeu
 
   public boolean nbJoueurSuffisant(){
       return this.joueurs.size() >= phase.nbJoueursMin();
+  }
+
+  public void remove(int i){
+    this.questions.remove(i);
+  }
+
+  public ArrayList<Question> getListByTheme(String theme){
+    return this.questions.getListByTheme(theme);
   }
 
   public void nouvellePhase(){
@@ -233,6 +250,10 @@ public class Jeu
       System.out.println(question);
       return question;
     }
+  }
+
+  public void afficheAllJoueurs(){
+    System.out.println(this.joueurs);
   }
 
   public void validateQuestion(Question question, String reponse){

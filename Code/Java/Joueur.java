@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 import java.util.Scanner;
 
 class Joueur
@@ -16,12 +16,12 @@ class Joueur
     this.etat = "en attente";
   }
 
-  public String saisie()
+  public void saisie(String nom, int numero)
   {
-    Scanner scanner = new Scanner (System.in);
-    this.nom = scanner.nextLine();
-    scanner.close();
-    return this.toString();
+    this.nom = nom;
+    this.numero = numero;
+    this.score = 0;
+    this.etat = "en attente";
   }
 
   public void majScore(int s)

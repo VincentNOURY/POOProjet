@@ -1,4 +1,4 @@
-package pooprojet;
+package application;
 
 interface Phase
 {
