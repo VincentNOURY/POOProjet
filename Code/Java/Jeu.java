@@ -74,7 +74,7 @@ public class Jeu
       do{
         for (int i = 0; i < this.getNbJoueurs(); i++){
           if (this.phase.getPhase() == 2){
-            System.out.println("Veuillez choisir un theme parmi les suivants :" + this.themes + "veuillez entrer son nom :");
+            System.out.println("Veuillez choisir un theme parmi les suivants :\n" + this.themes + "\nveuillez entrer son nom :");
             this.currentTheme = scanner.nextLine();
           }
           this.selectNextJoueur();
